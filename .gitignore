@@ -1,0 +1,10 @@
+# Игнорируемые файлы
+
+.DS_Store
+**/.DS_Store
+Thumbs.db
+*~
+~$*
+*.tmp
+.env
+.env.*
