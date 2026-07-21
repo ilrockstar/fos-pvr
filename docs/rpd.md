@@ -15,8 +15,8 @@
 | **Семестр** | По учебному плану (ориентир: 6-й) |
 | **Объём** | 32 ч лекций + 32 ч лабораторных работ (+ самостоятельная работа по КИМ) |
 | **Формат обучения** | Очный / смешанный (по расписанию) |
-| **Форма промежуточной аттестации** | Дифференцированный **зачёт** (экзамен не предусмотрен) |
-| **Сквозной проект** | Команда 3–4 чел.; ЛР1–8 = milestones; PRC = защита MVP |
+| **Форма промежуточной аттестации** | Дифференцированный **зачёт** по накопленным КИМ ([grading.md](grading.md)) |
+| **Сквозной проект** | Команда 3–4 чел.; ЛР1–10 = milestones; PRC = защита MVP |
 
 ---
 
@@ -61,10 +61,10 @@
 
 | Элемент | Содержание | Форма | Объём (ориентир) | Комpetence | КИМ |
 |---------|------------|-------|------------------|------------|-----|
-| M1. Анализ и подготовка ВР | EDA, preprocessing, STL, ADF/KPSS | Milestone ЛР1–2, ПЗ1–2 | 16 ч | BD-1.2, BD-1.3, ML-2.2 | [M1](../M1-analysis-and-preparation/) |
-| M2. Статистические и ML-модели | ARIMA/SARIMA, регрессия, boosting | Milestone ЛР3–4, ПЗ3 | 16 ч | ML-3.1, ML-3.2, ML-2.2 | [M2](../M2-statistical-and-ML-models/) |
-| M3. Нейросети и устойчивость | LSTM/GRU, HPO, drift, COP | Milestone ЛР5–6, ПЗ4, COP | 16 ч | ML-3.2, ML-5.1, ML-5.2 | [M3](../M3-neural-networks/) |
-| M4. Инфраструктура и деплой | API, Docker, CI/CD, мониторинг | Milestone ЛР7–8, ПЗ5, практики | 16 ч | LC-5.1, LC-5.2 | [M4](../M4-infrastructure-and-deployment/) |
+| M1. Анализ и подготовка ВР | EDA, preprocessing, STL, ADF/KPSS | Milestone ЛР1–2, ПЗ2–3 | 16 ч | BD-1.2, BD-1.3, ML-2.2 | [M1](../M1-analysis-and-preparation/) |
+| M2. Статистические и ML-модели | ARIMA/SARIMA, регрессия, boosting | Milestone ЛР3–6, ПЗ4 | 16 ч | ML-3.1, ML-3.2, ML-2.2 | [M2](../M2-statistical-and-ML-models/) |
+| M3. Нейросети и устойчивость | LSTM/GRU, HPO, drift, COP | Milestone ЛР7–8, COP | 16 ч | ML-3.2, ML-5.1, ML-5.2 | [M3](../M3-neural-networks/) |
+| M4. Инфраструктура и деплой | API, Docker, CI/CD, мониторинг | Milestone ЛР9–10, ПЗ5, практики | 16 ч | LC-5.1, LC-5.2 | [M4](../M4-infrastructure-and-deployment/) |
 | PRC | Финальная защита MVP | Защита + peer-review | — | все | [Project](../Project/) |
 
 Полная матрица competence × КИМ: [measurement_model.md](measurement_model.md).
@@ -108,11 +108,11 @@
 
 | Компонент | Вес |
 |-----------|-----|
-| Milestones ЛР1–8 (команда) | 40 % |
+| Milestones ЛР1–10 (команда) | 40 % |
 | ПЗ1–ПЗ5 (индивидуально) | 10 % |
 | Forecast Cup (COP) | 15 % |
-| PRC (защита MVP) | 30 % |
-| Peer-review | 5 % |
+| PRC (защита MVP) | 29 % |
+| Peer-review | 6 % |
 
 Подробно: [grading.md](grading.md) · Практические задания: [practical_assignments.md](practical_assignments.md).
 

@@ -30,7 +30,7 @@
     - Нейросети и устойчивость;
     - Инфраструктура и деплой.
 **Формат обучения:** лекции + **групповой сквозной проект** (3–4 человека); лабораторные работы = **milestones** проекта.  
-**Форма аттестации:** дифференцированный **зачёт** (не экзамен).
+**Форма аттестации:** дифференцированный **зачёт** по milestones, ПЗ, COP, PRC и peer-review ([grading.md](docs/grading.md)).
 
 **Пререквизиты и связи с другими дисциплинами.**
 - В курсе используются знания и навыки следующих дисциплин:
@@ -65,16 +65,16 @@
 
 Полная матрица компетенций × КИМ: [docs/measurement_model.md](docs/measurement_model.md).
 
-Система оценивания (40 / 10 / 15 / 30 / 5 %): [docs/grading.md](docs/grading.md).
+Система оценивания (40 / 10 / 15 / 29 / 6 %): [docs/grading.md](docs/grading.md).
 
 Практические задания ПЗ1–ПЗ5: [docs/practical_assignments.md](docs/practical_assignments.md).
 
 | № | Модуль | Компетенце (пример) | Форма | КИМ |
 |---|--------|---------------------|-------|-----|
 | 1 | M1 | BD 1.2, BD 1.3 | Milestone ЛР1–2, ПЗ1–2 | [M1](M1-analysis-and-preparation/README.md) |
-| 2 | M2 | ML-3.1, ML-3.2 | Milestone ЛР3–4, ПЗ3 | [M2](M2-statistical-and-ML-models/README.md) |
-| 3 | M3 | ML-3.2, ML-5.x | Milestone ЛР5–6, COP, ПЗ4 | [M3](M3-neural-networks/README.md) |
-| 4 | M4 | LC-5.x | Milestone ЛР7–8, ПЗ5, практики | [M4](M4-infrastructure-and-deployment/README.md) |
+| 2 | M2 | ML-3.1, ML-3.2 | Milestone ЛР3–6, ПЗ4 | [M2](M2-statistical-and-ML-models/README.md) |
+| 3 | M3 | ML-3.2, ML-5.x | Milestone ЛР7–8, COP | [M3](M3-neural-networks/README.md) |
+| 4 | M4 | LC-5.x | Milestone ЛР9–10, ПЗ5, практики | [M4](M4-infrastructure-and-deployment/README.md) |
 | — | PRC | все | Защита MVP + [peer-review](Project/peer_review.md) | [Project](Project/README.md) |
 
 ## 3. Контрольно-измерительные материалы
@@ -89,10 +89,10 @@
 
 | Компонент | Вес |
 |-----------|-----|
-| Milestones ЛР1–8 (команда) | 40 % |
+| Milestones ЛР1–10 (команда) | 40 % |
 | ПЗ1–ПЗ5 (индивидуально) | 10 % |
 | Forecast Cup (COP) | 15 % |
-| PRC + peer-review | 30 % + 5 % |
+| PRC + peer-review | 29 % + 6 % |
 
 Подробно: [docs/grading.md](docs/grading.md).
 

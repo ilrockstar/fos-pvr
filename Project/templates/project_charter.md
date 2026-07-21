@@ -1,6 +1,6 @@
 # Устав проекта (Project Charter)
 
-> **Архитектура A:** один репозиторий на команду; ЛР1–8 = milestones проекта.  
+> **Архитектура A:** один репозиторий на команду; ЛР1–10 = milestones проекта.  
 > Заполните в **недели 1–2**. Согласуйте с преподавателем и представителем партнёра.  
 > Подробнее: [project_guidelines.md](../project_guidelines.md)
 
@@ -69,12 +69,12 @@
 
 ## 4. Scope MVP
 
-### В scope (обязательно — milestones ЛР1–8 + PRC)
+### В scope (обязательно — milestones ЛР1–10 + PRC)
 
 - [ ] ЛР1–2: EDA и предобработка (`data/processed/`)
-- [ ] ЛР3–6: baseline + статистика + ML + нейросеть + `models/best_model/`
-- [ ] ЛР7: drift и `docs/monitoring.md`
-- [ ] ЛР8: REST API, Docker, CI (`DEPLOY.md`)
+- [ ] ЛР3–6: baseline + статистика + регрессия + ML
+- [ ] ЛР7–8: нейросеть + validation + `models/best_model/` + drift rules
+- [ ] ЛР9–10: REST API, Docker, CI, мониторинг
 - [ ] COP: submission + отчёт
 - [ ] PRC: live demo + peer-review
 
@@ -120,11 +120,13 @@
 | ЛР1 EDA | Lead | Data | ML | MLOps |
 | ЛР2 Preprocessing | Lead | Data | ML | MLOps |
 | ЛР3 Statistical | Lead | ML | Data | MLOps |
-| ЛР4 ML | Lead | ML | Data | MLOps |
-| ЛР5 Neural | Lead | ML | Data | MLOps |
-| ЛР6 Validation | Lead | ML | Data, MLOps | — |
-| ЛР7 Drift | Lead | ML, MLOps | Data | — |
-| ЛР8 Deploy | Lead | MLOps | ML | Data |
+| ЛР4 Stat diagnostics | Lead | ML | Data | MLOps |
+| ЛР5 Regression | Lead | ML | Data | MLOps |
+| ЛР6 ML | Lead | ML | Data | MLOps |
+| ЛР7 Neural | Lead | ML | Data | MLOps |
+| ЛР8 Validation / drift | Lead | ML, MLOps | Data | — |
+| ЛР9 Deploy | Lead | MLOps | ML | Data |
+| ЛР10 Monitoring | Lead | MLOps, ML | Data | — |
 | COP | Lead | ML | Data | MLOps |
 | PRC | Lead | все | — | — |
 
@@ -145,12 +147,14 @@
 | 2–3 | **ЛР1** EDA | Data | `notebooks/01_eda.ipynb`, `docs/report/01_eda.md` | |
 | 3–4 | **ЛР2** Preprocessing | Data | `data/processed/`, `src/preprocessing.py` | |
 | 5–6 | **ЛР3** Statistical | ML | `src/stat_models.py`, `models/sarima/` | |
-| 6–7 | **ЛР4** ML | ML | `src/ml_models.py`, `data/features/` | |
-| 8–9 | **ЛР5** Neural | ML | `src/neural_models.py`, `models/lstm/` | |
-| 9–10 | **ЛР6** Validation | ML | `docs/validation.md`, `models/best_model/` | |
+| 6–7 | **ЛР4** Stat diagnostics | ML | `src/stat_models_param.py` | |
+| 7–8 | **ЛР5** Regression | ML | `src/r_models.py`, `data/features/` | |
+| 8–9 | **ЛР6** ML | ML | `src/ml_models.py` | |
+| 9–10 | **ЛР7** Neural | ML | `src/neural_models.py`, `models/lstm/` | |
+| 10–11 | **ЛР8** Validation / drift | ML + MLOps | `docs/validation.md`, `models/best_model/` | |
 | 10–11 | **COP** Forecast Cup | ML | submission + отчёт | |
-| 11–12 | **ЛР7** Drift | ML + MLOps | `src/drift_analysis.py`, `docs/monitoring.md` | |
-| 13–14 | **ЛР8** Deploy | MLOps | `Dockerfile`, CI, `DEPLOY.md` | |
+| 12–13 | **ЛР9** Deploy | MLOps | `Dockerfile`, CI, MLflow | |
+| 13–14 | **ЛР10** Monitoring | MLOps + ML | `src/mon.py`, `docs/monitoring.md` | |
 | 15–16 | **PRC** + peer-review | Lead + все | Презентация, demo, отчёт | |
 
 *Даты уточняются преподавателем. ПЗ1–5 — индивидуально, параллельно milestones.*

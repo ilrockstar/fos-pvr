@@ -3,7 +3,7 @@
 **Модуль 4.** Инфраструктура и деплой прогнозных систем  
 **Время:** 1 академический час (+ 1 ч самостоятельной работы)  
 **Комpetенции:** LC-5.1 (С)  
-**Связь:** подготовка к [ЛР8](lab08_containerization_cicd.md); модель из [ЛР6](../M3-neural-networks/lab06_validation_hyperparameters.md)
+**Связь:** подготовка к [ЛР9](lab09_containerization_cicd.md); модель из [ЛР8](../M3-neural-networks/lab08_validation_drift.md)
 
 ---
 

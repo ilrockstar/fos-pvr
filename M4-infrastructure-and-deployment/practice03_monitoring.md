@@ -3,7 +3,7 @@
 **Модуль 4.** Инфраструктура и деплой прогнозных систем  
 **Время:** 2 академических часа (+ 2 ч самостоятельной работы)  
 **Комpetенции:** LC-5.1 (С), LC-5.2 (С), ML-5.1 (С)  
-**Связь:** [ЛР7](lab07_stability_drift.md), API из [Практики 1–2](practice01_rest_api.md)
+**Связь:** [ЛР8](../M3-neural-networks/lab08_validation_drift.md), [ЛР10](lab10_monitoring.md), API из [Практики 1–2](practice01_rest_api.md)
 
 ---
 
@@ -154,7 +154,7 @@ with mlflow.start_run(run_name="best_model_v1"):
 
 ## Задание 4. Алертинг и playbook (25 мин)
 
-Дополните `docs/monitoring.md` (связь с [ЛР7](lab07_stability_drift.md)):
+Дополните `docs/monitoring.md` (связь с [ЛР8](../M3-neural-networks/lab08_validation_drift.md) и [ЛР10](lab10_monitoring.md)):
 
 ```markdown
 ## Пороги алертов (MVP)

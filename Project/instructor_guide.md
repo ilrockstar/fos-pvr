@@ -1,7 +1,7 @@
 # Методические рекомендации преподавателю: проектная работа
 
 **Дисциплина:** Прогнозирование временных рядов: от статистики до MLOps  
-**Архитектура:** **вариант A** — ЛР1–8 = milestones **одного** группового проекта; PRC = финальная защита MVP  
+**Архитектура:** **вариант A** — ЛР1–10 = milestones **одного** группового проекта; PRC = финальная защита MVP  
 **Система оценивания:** [docs/grading.md](../docs/grading.md)
 
 ---
@@ -11,7 +11,7 @@
 Преподаватель выступает **научным руководителем** сквозного проекта:
 
 - формирует команды 3–4 чел. и распределяет кейсы партнёров;
-- контролирует сдачу **milestones ЛР1–8** и минимальные требования;
+- контролирует сдачу **milestones ЛР1–10** и минимальные требования;
 - модерирует коммуникацию «команда ↔ партнёр»;
 - оценивает milestones, COP, PRC и организует **peer-review**;
 - организует финальную защиту.
@@ -27,7 +27,7 @@
 - [ ] Согласованы ≥ 1 индустриальный партнёр (или пул кейсов / ENTSO-E как старт)
 - [ ] Для каждого кейса: описание задачи, формат данных, контакт, NDA (при необходимости)
 - [ ] Студентам выданы [project_guidelines.md](project_guidelines.md) и [methodical-guidelines/students](../methodical-guidelines/students/README.md)
-- [ ] Опубликован календарь **ЛР1–8**, COP, PRC (см. §4)
+- [ ] Опубликован календарь **ЛР1–10**, COP, PRC (см. §4)
 - [ ] Настроена сдача: LMS / GitHub Classroom + формы **ПЗ1–5** ([practical_assignments.md](../docs/practical_assignments.md))
 - [ ] Подготовлена форма **peer-review** ([peer_review.md](peer_review.md))
 
@@ -71,25 +71,27 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 |--------|-----------|-------------|------------------------|
 | 1–2 | M0: устав | — | Анонс; проверка [уставов](templates/project_charter.md), RACI |
 | 3 | Kick-off | — | Intro с партнёрами |
-| 2–3 | **ЛР1** EDA | 5 % | Приём 10–15 мин/команда; докладчик **Data** |
-| 3–4 | **ЛР2** Preprocessing | 5 % | Приём; **ПЗ2** (индив.) |
-| 5–6 | **ЛР3** Statistical | 5 % | Baseline + SARIMA/ES |
-| 6–7 | **ЛР4** ML | 5 % | Features, boosting; **ПЗ3** |
-| 8–9 | **ЛР5** Neural | 5 % | LSTM/GRU |
-| 9–10 | **ЛР6** Validation | 5 % | `best_model`, протокол validation |
-| 10–11 | **COP** | 15 % | Submission + отчёт ([competition.md](../M3-neural-networks/competition.md)) |
-| 11–12 | **ЛР7** Drift | 5 % | `monitoring.md`; **ПЗ4, ПЗ5** |
-| 13–14 | **ЛР8** Deploy | 5 % | Smoke-test Docker по `DEPLOY.md` |
-| 15–16 | **PRC** | 30 % + peer 5 % | Защита; peer-review 48–72 ч |
+| 2–3 | **ЛР1** EDA | 4 % | Приём 10–15 мин/команда; докладчик **Data** |
+| 3–4 | **ЛР2** Preprocessing | 4 % | Приём; **ПЗ3** (индив.) |
+| 5–6 | **ЛР3** Statistical | 4 % | Baseline + SARIMA/ES |
+| 6–7 | **ЛР4** Stat diagnostics | 4 % | Подбор, остатки; **ПЗ4** |
+| 7–8 | **ЛР5** Regression | 4 % | Лаги, exog |
+| 8–9 | **ЛР6** ML | 4 % | RF/XGBoost |
+| 9–10 | **ЛР7** Neural | 4 % | LSTM/GRU |
+| 10–11 | **ЛР8** Validation + drift | 4 % | `best_model`, Optuna, drift rules |
+| 10–11 | **COP** | 15 % | Submission + отчёт |
+| 12–13 | **ЛР9** Deploy | 4 % | Docker, CI, MLflow |
+| 13–14 | **ЛР10** Monitoring | 4 % | `mon.py`; **ПЗ5** |
+| 15–16 | **PRC** | 29 % + peer 6 % | Защита; peer-review 48–72 ч |
 
-**ПЗ1** (нед. 2) — параллельно ЛР1, индивидуально, 2 %.
+**ПЗ1–2** (нед. 1–2) — параллельно ЛР1, индивидуально, по 2 %.
 
 ### Формат feedback на milestone ЛР
 
 1. Соответствие [шаблону](templates/milestone_report.md) и артефактам из [grading.md §2](../docs/grading.md) — да/нет.
 2. Две сильные стороны.
 3. Два обязательных исправления до следующего milestone.
-4. Предварительный уровень **Б / С / П** (60 / 80 / 100 %) — ориентир для 5 % этой ЛР.
+4. Предварительный уровень **Б / С / П** (60 / 80 / 100 %) — ориентир для 4 % этой ЛР.
 
 На защите milestone команда **5–7 мин**; вопросы задаются **по ролям** (не только докладчику).
 
@@ -113,7 +115,7 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 ### Если партнёр «пропал»
 
 1. Резервный кейс: **ENTSO-E** + proxy-постановка в уставе.
-2. При оценке **PRC** снизить критерий **A** («работа с партнёром») в [rubrics.md](rubrics.md); технические ЛР1–8 и MVP — без снижения весов.
+2. При оценке **PRC** снизить критерий **A** («работа с партнёром») в [rubrics.md](rubrics.md); технические ЛР1–10 и MVP — без снижения весов.
 3. На защите преподаватель выступает как «заказчик».
 
 ---
@@ -124,17 +126,17 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 
 | Компонент | Вес | Где оценивает преподаватель |
 |-----------|-----|----------------------------|
-| Milestones **ЛР1–8** | **40 %** (8 × 5 %) | Файлы ЛР + отчёт команды; rubrics §3 в [rubrics.md](rubrics.md) |
+| Milestones **ЛР1–10** | **40 %** (10 × 4 %) | Файлы ЛР + отчёт команды; rubrics §3 в [rubrics.md](rubrics.md) |
 | **ПЗ1–5** | **10 %** (5 × 2 %) | LMS; ключи `*_key.md` |
 | **COP** | **15 %** | 50 % leaderboard + 50 % отчёт |
-| **PRC** | **30 %** | [rubrics.md](rubrics.md) §1 (критерии A–F) |
-| **Peer-review** | **5 %** | [peer_review.md](peer_review.md); \(k_{peer}\) 0,7–1,3 к PRC |
+| **PRC** | **29 %** | [rubrics.md](rubrics.md) §1 (критерии A–F) |
+| **Peer-review** | **6 %** | [peer_review.md](peer_review.md); \(k_{peer}\) 0,7–1,3 к PRC |
 
 Подробно: [docs/grading.md](../docs/grading.md).
 
 > **Не используйте** старую схему «Milestone 1/2/3 + 35 % защита» — она заменена вариантом A.
 
-### 6.2. Оценивание одной ЛР (5 %)
+### 6.2. Оценивание одной ЛР (4 %)
 
 | Уровень | % | Дескриптор (кратко) |
 |---------|---|---------------------|
@@ -142,14 +144,14 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 | Средний | 80 | Полный объём, код в repo, корректные выводы |
 | Продвинутый | 100 | Глубина, воспроизводимость, готовность к следующему этапу |
 
-**Вклад в зачёт:** `5 % × (уровень / 100)`.
+**Вклад в зачёт:** `4 % × (уровень / 100)`.
 
-### 6.3. PRC (30 %) и peer-review
+### 6.3. PRC (29 %) и peer-review
 
 1. Выставите **командную** оценку PRC по rubrics §1 (сумма весов критериев A–F = 100 %).
-2. Переведите в 30 % дисциплины: `30 % × (балл / 100)`.
+2. Переведите в 29 % дисциплины: `29 % × (балл / 100)`.
 3. После peer-review умножьте на **\(k_{peer}\)** (0,7–1,3) — см. формулы в [peer_review.md](peer_review.md).
-4. Отдельно начислите **5 %** peer-review каждому студенту.
+4. Отдельно начислите **6 %** peer-review каждому студенту.
 
 ### 6.4. Индивидуальный вклад
 
@@ -159,9 +161,9 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 
 ### 6.5. Минимальные пороги зачёта
 
-См. [grading.md §8](../docs/grading.md):
+См. [grading.md §6](../docs/grading.md):
 
-- ≥ 6 из 8 milestones ЛР на уровне не ниже «Базовый»;
+- ≥ 7 из 10 milestones ЛР на уровне не ниже «Базовый»;
 - ≥ 1 submission COP;
 - защита PRC (demo);
 - заполнен peer-review (≥ 3 анкеты на команду из 4 чел.).
@@ -190,7 +192,7 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 2. Почему выбрана финальная модель (`best_model`)?
 3. Протокол валидации — где test, нет ли утечки?
 4. Прогноз через API (live).
-5. План при data/concept drift ([ЛР7](../M4-infrastructure-and-deployment/lab07_stability_drift.md))?
+5. План при data/concept drift ([ЛР8](../M3-neural-networks/lab08_validation_drift.md), [ЛР10](../M4-infrastructure-and-deployment/lab10_monitoring.md))?
 
 После защиты — открыть **peer-review** на 48–72 ч.
 
@@ -201,7 +203,7 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 | Проблема | Действие |
 |----------|----------|
 | Команда не бьёт baseline (ЛР3) | EDA (ЛР1–2), упростить $h$, ES + признаки |
-| MVP не собирается в Docker (ЛР8) | Extension только при working local API; MLOps + office hours |
+| MVP не собирается в Docker (ЛР9) | Extension только при working local API; MLOps + office hours |
 | Конфликт / free-rider | RACI в charter, git log, peer-review |
 | Партнёр дал не time series | Агрегация по времени или смена кейса |
 | «Lead делает всё» | Напомнить RACI; оценка по ролям на milestones |
@@ -213,11 +215,11 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 
 | Competence | Milestones / КИМ |
 |------------|------------------|
-| BD-1.2, BD-1.3 | ЛР1–2, ПЗ1–2 |
-| ML-2.2, ML-2.3 | ЛР3–6, ПЗ3, COP, PRC |
-| ML-3.1, ML-3.2 | ЛР3–6, COP |
-| ML-5.1, ML-5.2 | ЛР7, ПЗ4–5, PRC |
-| LC-5.1, LC-5.2 | ЛР8, практики M4, PRC |
+| BD-1.2, BD-1.3 | ЛР1–2, ПЗ2–3 |
+| ML-2.2, ML-2.3 | ЛР3–8, ПЗ4, COP, PRC |
+| ML-3.1, ML-3.2 | ЛР3–8, COP |
+| ML-5.1, ML-5.2 | ЛР8, ЛР10, ПЗ5, PRC |
+| LC-5.1, LC-5.2 | ЛР9–10, практики M4, PRC |
 
 Полная матрица: [measurement_model.md](../docs/measurement_model.md).
 

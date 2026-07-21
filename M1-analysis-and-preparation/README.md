@@ -13,18 +13,18 @@
 |----|------|------------|----------------|
 | [ЛР1](lab01_eda.md) | EDA временного ряда | Структура ряда, тренд, сезонность, ACF/PACF | Milestone, отчёт |
 | [ЛР2](lab02_preprocessing_decomposition.md) | Предобработка и декомпозиция | … | Milestone, отчёт |
-| [ПЗ1](quiz_pz01_structure.md) | Квиз «Структура ряда» | … | 2 %, индив. |
-| [ПЗ2](quiz_pz02_stationarity.md) | Квиз «Стационарность» | … | 2 %, индив. |
-| [quiz.md](quiz.md) | Объединённый тренировочный квиз | … | формативно |
+| [ПЗ2](quiz_pz01_structure.md) | Квиз «Структура ряда» | тренд, сезонность, ACF | 2 %, индив. |
+| [ПЗ3](quiz_pz02_stationarity.md) | Квиз «Стационарность» | log/diff, ADF/KPSS | 2 %, индив. |
+| [quiz.md](quiz.md) | Самопроверка M1 | … | формативно |
 
 ---
 
 ## Сквозной сценарий семестра
 
-Все восемь milestones выполняет **команда 3–4 чел.** на **одном наборе данных** — суточном потреблении электроэнергии (регион ENTSO-E). Общий репозиторий и отчёт; см. [Project/README.md](../Project/README.md) и [docs/grading.md](../docs/grading.md).
+Все **десять** milestones выполняет **команда 3–4 чел.** на **одном наборе данных** — суточном потреблении электроэнергии (регион ENTSO-E). Общий репозиторий и отчёт; см. [Project/README.md](../Project/README.md) и [docs/grading.md](../docs/grading.md).
 
 ```
-ЛР1 (EDA) → ЛР2 (подготовка) → ЛР3–4 (модели) → ЛР5–6 (нейросети) → ЛР7–8 (MLOps)
+ЛР1–2 (M1) → ЛР3–6 (M2) → ЛР7–8 (M3) → ЛР9–10 (M4) → PRC
 ```
 
 Подробнее об источнике данных — в [data_sources.md](data_sources.md).
@@ -37,10 +37,12 @@
 |------|----------|
 | [lab01_eda.md](lab01_eda.md) | Лабораторная работа 1: EDA |
 | [lab02_preprocessing_decomposition.md](lab02_preprocessing_decomposition.md) | Лабораторная работа 2: предобработка и декомпозиция |
-| [quiz.md](quiz.md) | Объединённый тренировочный квиз M1 |
-| [quiz_pz01_structure.md](quiz_pz01_structure.md) | ПЗ1 |
-| [quiz_pz02_stationarity.md](quiz_pz02_stationarity.md) | ПЗ2 |
-| [quiz_pz01_key.md](quiz_pz01_key.md) | Ключ ПЗ1 (преподаватель) |
-| [quiz_pz02_key.md](quiz_pz02_key.md) | Ключ ПЗ2 (преподаватель) |
+| [quiz.md](quiz.md) | Самопроверка M1 (формативно) |
+| [quiz_pz1_ml_basics.md](quiz_pz1_ml_basics.md) | ПЗ1: остаточные знания ML |
+| [quiz_pz01_structure.md](quiz_pz01_structure.md) | ПЗ2: структура ряда |
+| [quiz_pz02_stationarity.md](quiz_pz02_stationarity.md) | ПЗ3: стационарность |
+| [quiz_pz1_key.md](quiz_pz1_key.md) | Ключ ПЗ1 |
+| [quiz_pz01_key.md](quiz_pz01_key.md) | Ключ ПЗ2 |
+| [quiz_pz02_key.md](quiz_pz02_key.md) | Ключ ПЗ3 |
 | [data_sources.md](data_sources.md) | Описание сквозного датасета и альтернативных источников |
 | [instructor_guide.md](instructor_guide.md) | Методические рекомендации преподавателю |

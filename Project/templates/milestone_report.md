@@ -1,6 +1,6 @@
-# Шаблон отчёта по milestone (ЛР1–8)
+# Шаблон отчёта по milestone (ЛР1–10)
 
-> **Milestone:** ЛР__ — *(EDA / Preprocessing / Statistical / ML / Neural / Validation / Drift / Deploy)*  
+> **Milestone:** ЛР__ — *(EDA / Preprocessing / Statistical / Stat diagnostics / Regression / ML / Neural / Validation / Deploy / Monitoring)*  
 > **Команда:**  
 > **Ответственный (R):** *(Data / ML / MLOps)*  
 > **Дата сдачи:**  
@@ -61,46 +61,65 @@
 | ES / SARIMA | | | | |
 | **Выбранная** | | | | |
 
-- Диагностика остатков: 
+- Диагностика остатков: *(→ ЛР4)*
 - Артефакты: `src/stat_models.py`, `models/sarima/`
 
-### ЛР4 — ML models · ответственный: **ML**
+### ЛР4 — Stat diagnostics · ответственный: **ML**
 
 | Модель | MAE | RMSE | SMAPE | Примечание |
 |--------|-----|------|-------|------------|
-| RF / XGBoost / … | | | | |
-| vs ЛР3 | | | | |
+| Кандидаты SARIMA | | | | |
+| **Финальная SARIMA** | | | | |
+
+- Подбор (p,d,q)(P,D,Q,s): AIC/BIC
+- Артефакты: `src/stat_models_param.py`
+
+### ЛР5 — Regression · ответственный: **ML**
+
+| Модель | MAE | RMSE | SMAPE | Примечание |
+|--------|-----|------|-------|------------|
+| Linear / Ridge | | | | |
+| vs SARIMA (ЛР4) | | | | |
 
 - Признаки: лаги, календарь, exog
-- Артефакты: `src/ml_models.py`, `data/features/`
+- Артефакты: `src/r_models.py`, `data/features/`
 
-### ЛР5 — Neural nets · ответственный: **ML**
+### ЛР6 — ML models · ответственный: **ML**
+
+| Модель | MAE | RMSE | SMAPE | Примечание |
+|--------|-----|------|-------|------------|
+| RF / XGBoost | | | | |
+| vs ЛР3–5 | | | | |
+
+- Артефакты: `src/ml_models.py`
+
+### ЛР7 — Neural nets · ответственный: **ML**
 
 - Архитектура: LSTM / GRU, окно, units
-- Метрики vs ЛР3–4: 
+- Метрики vs ЛР3–6: 
 - Артефакты: `src/neural_models.py`, `models/lstm/`
 
-### ЛР6 — Validation / HPO · ответственный: **ML**
+### ЛР8 — Validation / drift · ответственные: **ML + MLOps**
 
 - Протокол: walk-forward, split, горизонт
-- HPO (Optuna / grid): лучшие гиперпараметры
+- HPO (Optuna): лучшие гиперпараметры
 - **Финальная модель** и обоснование выбора
-- Артефакты: `docs/validation.md`, `models/best_model/`
+- Drift: сценарий, PSI, plan retraining
+- Артефакты: `docs/validation.md`, `models/best_model/`, `src/drift_analysis.py`
 
-### ЛР7 — Drift · ответственные: **ML + MLOps**
-
-- Сценарий деградации (data / concept drift): 
-- Метрики до/после: 
-- PSI / скользящий MAE: порог алерта
-- План retraining: окно, триггер
-- Артефакты: `src/drift_analysis.py`, `docs/monitoring.md`
-
-### ЛР8 — Deploy / CI · ответственный: **MLOps**
+### ЛР9 — Deploy / CI · ответственный: **MLOps**
 
 - [ ] `GET /health`, `POST /predict` (или `/forecast`)
 - [ ] Docker build OK
 - [ ] CI: тесты + сборка образа
+- [ ] MLflow run; черновик Airflow DAG
 - [ ] `DEPLOY.md` — команда запуска ≤ 5 мин
+
+### ЛР10 — Monitoring · ответственные: **MLOps + ML**
+
+- [ ] Метрики inference (latency, throughput)
+- [ ] Drift alerts по правилам ЛР8
+- [ ] Артефакты: `src/mon.py`, `docs/monitoring.md`
 
 ```bash
 docker compose up --build

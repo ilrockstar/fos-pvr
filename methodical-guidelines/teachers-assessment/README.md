@@ -9,11 +9,11 @@
 
 | Компонент | Вес | Документ |
 |-----------|-----|----------|
-| ЛР1–8 (milestones) | 40 % (×5 %) | [docs/grading.md](../../docs/grading.md) |
+| ЛР1–10 (milestones) | 40 % (×4 %) | [docs/grading.md](../../docs/grading.md) |
 | ПЗ1–5 | 10 % | [practical_assignments.md](../../docs/practical_assignments.md) + ключи `*_key.md` |
 | COP | 15 % | [M3/competition/](../../M3-neural-networks/competition/) |
-| PRC | 30 % | [Project/rubrics.md](../../Project/rubrics.md) |
-| Peer-review | 5 % + \(k_{peer}\) | [peer_review.md](../../Project/peer_review.md) |
+| PRC | 29 % | [Project/rubrics.md](../../Project/rubrics.md) |
+| Peer-review | 6 % + \(k_{peer}\) | [peer_review.md](../../Project/peer_review.md) |
 
 Шкала уровней КИМ: **Базовый 60 % · Средний 80 % · Продвинутый 100 %**.
 
@@ -26,7 +26,7 @@
 3. Выставьте уровень Б/С/П по критериям в файле соответствующей ЛР.
 4. На защите задайте вопрос **не только докладчику**, но и другим ролям.
 
-**Формула:** вклад ЛР = 5 % × (уровень % / 100).
+**Формула:** вклад ЛР = 4 % × (уровень % / 100).
 
 ---
 

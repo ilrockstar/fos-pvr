@@ -47,7 +47,7 @@
 | statsmodels | ARIMA/SARIMA, ACF/PACF |
 | scikit-learn, xgboost / lightgbm | ML-модели |
 | PyTorch или TensorFlow | LSTM/GRU |
-| Optuna | HPO (ЛР6) |
+| Optuna | HPO (ЛР8) |
 | FastAPI, uvicorn | REST API |
 | Docker, docker compose | Деплой MVP |
 

@@ -1,176 +1,173 @@
 # Лабораторная работа 3. Классические статистические модели
 
 **Модуль 2.** Статистические и ML-модели прогнозирования  
-**Время выполнения:** 4 академических часа (+ 2 ч самостоятельной работы)  
-**Компетенции:** ML-3.1 (С), ML-2.2 (С)
+**Ролевой фокус:** ML Engineer  
+**Комpetence:** ML-3.1, ML-2.2 (С)  
+**Время:** 2 ч лекция + 2 ч лабораторная (+ 2 ч самостоятельной работы)
 
-> **Архитектура A — milestone команды (3–4 чел.):** один репозиторий, общий отчёт. Артефакты: `src/stat_models.py`, `models/sarima/`. Вес: **5 %** — [docs/grading.md](../docs/grading.md).
-
----
-
-## Краткая теоретическая справка
-
-**AR(p)** — авторегрессия: $y_t = c + \sum_{i=1}^{p} \phi_i y_{t-i} + \varepsilon_t$.  
-**MA(q)** — скользящее среднее: $y_t = \mu + \varepsilon_t + \sum_{j=1}^{q} \theta_j \varepsilon_{t-j}$.  
-**ARIMA(p,d,q)** — ARMA на $d$-кратно дифференцированном ряде.  
-**SARIMA(p,d,q)(P,D,Q,s)** — добавляет сезонные компоненты с периодом $s$.  
-**Экспоненциальное сглаживание (ES)** — Holt-Winters для тренда и сезонности; мало параметров, быстрый baseline.
-
-**Подбор порядка:** ACF/PACF, информационные критерии AIC/BIC.  
-**Диагностика:** остатки должны быть «белым шумом» (тест Льюнга–Бокса, ACF остатков).  
-**Метрики:** MAE, RMSE, MAPE, SMAPE — для сравнения моделей на отложенной выборке.
+> **Milestone команды (3–4 чел.):** `src/stat_models.py`, `models/sarima/`. Вес: **4 %** — [docs/grading.md](../docs/grading.md).
 
 ---
 
-## Задача
+## 1. Цель работы
 
-На основе подготовленного ряда суточной нагрузки **постройте и сравните классические статистические модели** прогноза. Выберите лучшую модель по совокупности критериев (метрики + диагностика) и сохраните её для последующих лабораторных.
-
-**Входные данные:** `data/processed/load_daily_clean.csv` (из ЛР2), `preprocessing_meta.json`.
-
-**Результат:** обученная SARIMA/ARIMA + baseline ES, отчёт с диагностикой, сохранённая модель в `models/`.
+Построить **классические статистические модели** прогноза суточной нагрузки: baseline (naive, Holt-Winters) и **SARIMA/ARIMA**; заложить основу для подбора параметров в [ЛР4](lab04_statistical_diagnostics.md).
 
 ---
 
-## Ход работы
+## 2. Входные требования и пререквизиты
 
-### 1. Подготовка к моделированию
+- [ЛР2](../M1-analysis-and-preparation/lab02_preprocessing_decomposition.md): `load_daily_clean.csv`, `preprocessing_meta.json` ($d$, $s$).
+- Базовое понимание ARIMA/SARIMA (лекция M2).
 
-1. Загрузите очищенный ряд; используйте выводы ЛР1–ЛР2 ($d$, $s$).
-2. Разделите данные **хронологически**: train (80 %) / test (20 %); не перемешивайте!
-3. Постройте ACF/PACF для train-части.
-
-### 2. Подбор ARIMA / SARIMA
-
-1. Определите начальные $(p,d,q)$ по ACF/PACF и метаданным ЛР2.
-2. Переберите 3–5 конфигураций SARIMA (или ARIMA, если сезонность слабая).
-3. Сравните модели по AIC/BIC на train.
-4. Выберите финальную модель с учётом простоты и диагностики.
-
-### 3. Экспоненциальное сглаживание (baseline)
-
-1. Обучите Holt-Winters (`seasonal_periods=7` или 365).
-2. Сравните с SARIMA по MAE/RMSE на test.
-
-### 4. Диагностика остатков
-
-1. Постройте график остатков, их гистограмму и ACF.
-2. Проведите тест Льюнга–Бокса.
-3. Сделайте вывод об адекватности модели.
-
-### 5. Прогноз и сохранение
-
-1. Постройте прогноз на длину test; визуализируйте train / test / forecast.
-2. Рассчитайте MAE, RMSE, MAPE (или SMAPE).
-3. Сохраните модель: `models/sarima_baseline.pkl` (или аналог).
+**Стек:** statsmodels (SARIMAX, Holt-Winters), pandas, numpy.
 
 ---
 
-## Фрагменты кода
+## 3. Задание
 
-### Train / test split
+1. Хронологический split train (80 %) / test (20 %).
+2. Baseline: naive, Holt-Winters (ES).
+3. SARIMA/ARIMA: 2–3 конфигурации; сравнение по AIC.
+4. Прогноз на test; метрики MAE, RMSE, SMAPE.
+
+**Ожидаемые артефакты:** `src/stat_models.py`, `models/sarima/`, `docs/report/03_statistical.md`.
+
+---
+
+## 4. Теоретическая справка
+
+| Модель | Описание |
+|--------|----------|
+| **Naive** | $\hat{y}_t = y_{t-1}$ — простейший baseline |
+| **Holt-Winters (ES)** | Экспоненциальное сглаживание с трендом и сезонностью |
+| **ARIMA$(p,d,q)$** | AR + интегрирование + MA |
+| **SARIMA$(p,d,q)(P,D,Q,s)$** | ARIMA с сезонной компонентой |
+
+**AIC/BIC** — критерии выбора модели (меньше — лучше, с оговоркой о простоте). Подбор и диагностика остатков — в ЛР4.
+
+---
+
+## 5. Ход работы
+
+### Этап 1. Подготовка
+
+1. Загрузите ряд; используйте $d$, $s$ из ЛР2.
+2. Train/test split; **без перемешивания**.
+3. ACF/PACF на train — для обоснования порядка.
+
+### Этап 2. Baseline
+
+1. Naive и seasonal naive (опционально).
+2. Holt-Winters (`seasonal_periods=7` или из метаданных).
+3. Метрики на test.
+
+### Этап 3. SARIMA / ARIMA
+
+1. Начальный порядок $(p,d,q)(P,D,Q,s)$ по ACF/PACF и ЛР2.
+2. Обучите 2–3 конфигурации (`SARIMAX`).
+3. Сравните AIC; выберите кандидата для ЛР4.
+4. Сохраните модель: `models/sarima/`.
+
+### Этап 4. Отчёт
+
+- Таблица: naive | ES | SARIMA (AIC, MAE, RMSE, SMAPE).
+- График train / test / forecast.
+
+### Фрагменты кода
 
 ```python
 import pandas as pd
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
 df = pd.read_csv("data/processed/load_daily_clean.csv", parse_dates=["date"], index_col="date")
 series = df["load_mwh"]
+split = int(len(series) * 0.8)
+train, test = series.iloc[:split], series.iloc[split:]
 
-split_idx = int(len(series) * 0.8)
-train, test = series.iloc[:split_idx], series.iloc[split_idx:]
-```
-
-### ACF / PACF на train
-
-```python
-from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
-
-plot_acf(train, lags=60)
-plot_pacf(train, lags=60, method="ywm")
-```
-
-### Подбор SARIMA (перебор сетки — сократите под свои данные)
-
-```python
-import itertools
-from statsmodels.tsa.statespace.sarimax import SARIMAX
-
-p = d = q = range(0, 2)
-P = D = Q = range(0, 2)
-s = 7  # из ЛР2
-
-results = []
-for order in itertools.product(p, [1], q):
-    for seasonal_order in itertools.product(P, [0], Q, [s]):
-        try:
-            model = SARIMAX(train, order=order, seasonal_order=seasonal_order,
-                            enforce_stationarity=False, enforce_invertibility=False)
-            fit = model.fit(disp=False)
-            results.append((order, seasonal_order, fit.aic, fit.bic))
-        except Exception:
-            pass
-
-results.sort(key=lambda x: x[2])
-best_order, best_seasonal, aic, bic = results[0][0], results[0][1], results[0][2], results[0][3]
-```
-
-### Holt-Winters
-
-```python
-from statsmodels.tsa.holtwinters import ExponentialSmoothing
-
-hw = ExponentialSmoothing(train, trend="add", seasonal="add", seasonal_periods=7)
-hw_fit = hw.fit()
-hw_forecast = hw_fit.forecast(len(test))
-```
-
-### Диагностика остатков
-
-```python
-from statsmodels.stats.diagnostic import acorr_ljungbox
-
-final_model = SARIMAX(train, order=best_order, seasonal_order=best_seasonal).fit(disp=False)
-residuals = final_model.resid
-
-lb = acorr_ljungbox(residuals, lags=[10], return_df=True)
-print(lb)  # p-value > 0.05 → нет автокорреляции остатков
-```
-
-### Метрики
-
-```python
-import numpy as np
-
-def mae(y_true, y_pred):
-    return np.mean(np.abs(y_true - y_pred))
-
-forecast = final_model.forecast(len(test))
-print(f"MAE={mae(test, forecast):.2f}, RMSE={np.sqrt(np.mean((test-forecast)**2)):.2f}")
-```
-
-### Сохранение модели
-
-```python
-import pickle
-
-with open("models/sarima_baseline.pkl", "wb") as f:
-    pickle.dump(final_model, f)
+hw = ExponentialSmoothing(train, trend="add", seasonal="add", seasonal_periods=7).fit()
+model = SARIMAX(train, order=(1, 1, 1), seasonal_order=(1, 0, 1, 7)).fit(disp=False)
+forecast = model.forecast(len(test))
 ```
 
 ---
 
-## Формат сдачи
+## 6. Требования к отчёту
 
-- Notebook + отчёт (4–5 страниц): таблица сравнения моделей, графики, диагностика.
-- Файл модели в `models/`.
-- Краткий вывод: «почему выбрана именно эта SARIMA».
+1. Описание split и горизонта прогноза.
+2. Таблица сравнения моделей.
+3. График прогноза vs факт.
+4. Обоснование начального порядка SARIMA (ACF/PACF).
+5. Вывод для команды: beat naive?
 
 ---
 
-## Критерии оценки
+## 7. Критерии оценки
+
+### 7.1. Детализированная шкала (сумма = 4 % milestone)
+
+| Критерий | Макс. балл |
+|----------|------------|
+| Baseline (naive / ES) | 0,5 |
+| SARIMA обучена, прогноз на test | 0,8 |
+| Хронологический split, метрики | 0,6 |
+| ACF/PACF, обоснование порядка | 0,5 |
+| `stat_models.py`, сохранение модели | 0,4 |
+| Качество отчёта и защита | 1,2 |
+| **Итого** | **4,0** |
+
+### 7.2. Уровни Б / С / П
 
 | Уровень | Критерии |
 |---------|----------|
-| **Базовый** | ARIMA/SARIMA обучена, прогноз на test построен, MAE/RMSE рассчитаны, хронологический split |
-| **Средний** | Сравнены ≥3 конфигурации по AIC, добавлен ES-baseline, проведена диагностика остатков (график + Ljung-Box) |
-| **Продвинутый** | Обоснован компромисс AIC/BIC vs простота, интерпретация $(p,d,q)(P,D,Q,s)$ с опорой на ЛР1–2, модель сохранена и воспроизводима |
+| **Базовый** | SARIMA + naive/ES; split; метрики на test |
+| **Средний** | ≥2 конфигурации SARIMA; модель сохранена; отчёт |
+| **Продвинутый** | Обоснованный порядок по ACF/PACF; воспроизводимый `stat_models.py` |
+
+---
+
+## 8. Контрольные вопросы
+
+### Блок 1. Статистические модели
+
+**Базовый уровень**
+
+| № | Вопрос |
+|---|--------|
+| 1 | Что такое ARIMA? Расшифруйте $(p,d,q)$. |
+| 2 | Чем SARIMA отличается от ARIMA? |
+| 3 | Зачем нужны baseline-модели (naive, ES)? |
+| 4 | Почему train/test split для ВР — хронологический? |
+| 5 | Какие метрики вы использовали для сравнения? |
+
+**Продвинутый уровень**
+
+| № | Вопрос |
+|---|--------|
+| 6 | Как ACF/PACF помогают выбрать $p$ и $q$? |
+| 7 | Что такое AIC? Когда модель с меньшим AIC не лучше? |
+| 8 | Как $d$ и $s$ из ЛР2 использованы в SARIMA? |
+| 9 | Чем Holt-Winters отличается от SARIMA по допущениям? |
+| 10 | Когда ES может обойти SARIMA на коротком горизонте? |
+
+**Экспертный уровень**
+
+| № | Вопрос |
+|---|--------|
+| 11 | Как exogenous variables добавляются в SARIMAX? |
+| 12 | Какие риски переобучения SARIMA на train? |
+| 13 | Как интерпретировать сезонные коэффициенты $(P,D,Q,s)$? |
+| 14 | Когда стоит перейти к регрессии (ЛР5) вместо SARIMA? |
+| 15 | Как результаты ЛР3 передаются в ЛР4? |
+
+---
+
+## 9. Связь с другими элементами ФОС
+
+| Элемент | Связь |
+|---------|-------|
+| [ЛР2](../M1-analysis-and-preparation/lab02_preprocessing_decomposition.md) | Входные данные |
+| [ЛР4](lab04_statistical_diagnostics.md) | Подбор параметров и диагностика |
+| [ПЗ4](../docs/practical_assignments.md) | Квиз «Метрики качества» |
+| [Project](../Project/project_guidelines.md) | ML — R за milestone |

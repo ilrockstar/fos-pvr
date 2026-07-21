@@ -1,7 +1,7 @@
 # Методические рекомендации к выполнению проектной работы
 
 **Дисциплина:** Прогнозирование временных рядов: от статистики до MLOps  
-**Архитектура:** **вариант A** — ЛР1–8 = milestones **одного** группового проекта; PRC = финальная защита MVP  
+**Архитектура:** **вариант A** — ЛР1–10 = milestones **одного** группового проекта; PRC = финальная защита MVP  
 **Формат:** командный кейс (PRC) на данных индустриального партнёра (или согласованном учебном ряде)  
 **Команда:** 3–4 обучающихся · **один репозиторий** · общий отчёт
 
@@ -27,19 +27,19 @@
 
 ## 2. Проект и лабораторные (вариант A)
 
-В варианте A **нет отдельных индивидуальных лабораторных**. Восемь ЛР — **контрольные точки (milestones)** одного сквозного проекта.
+В варианте A **нет отдельных индивидуальных лабораторных**. **Десять** ЛР — **контрольные точки (milestones)** одного сквозного проекта.
 
 | Аспект | Как устроено |
 |--------|--------------|
 | Репозиторий | Один `team-<name>/` на всю команду |
-| ЛР1–8 | Milestones: раздел отчёта + модуль кода (см. [grading.md](../docs/grading.md)) |
+| ЛР1–10 | Milestones: раздел отчёта + модуль кода (см. [grading.md](../docs/grading.md)) |
 | ПЗ1–5 | **Индивидуально** — личный вклад в зачёт (10 %) |
 | COP (Forecast Cup) | Соревнование; команда 2–4 чел. (может совпадать с проектной) |
-| PRC | Финальная защита **целого** MVP (30 %) |
-| Peer-review | Взаимооценка вклада по ролям (5 % + \(k_{peer}\)) |
+| PRC | Финальная защита **целого** MVP (29 %) |
+| Peer-review | Взаимооценка вклада по ролям (6 % + \(k_{peer}\)) |
 
 ```
-Устав → ЛР1…ЛР8 (milestones, 40%) → COP (15%) → PRC + peer-review (35%)
+Устав → ЛР1…ЛР10 (milestones, 40%) → COP (15%) → PRC + peer-review (35%)
               ↑
          ПЗ1–5 параллельно (индивидуально, 10%)
 ```
@@ -104,15 +104,17 @@
 | **ЛР1** EDA | A | **R** | C | I | `notebooks/01_eda.ipynb`, `docs/report/01_eda.md` |
 | **ЛР2** Preprocessing | A | **R** | C | I | `data/processed/`, `src/preprocessing.py` |
 | **ЛР3** Statistical | A | C | **R** | I | `src/stat_models.py`, `models/sarima/` |
-| **ЛР4** ML | A | C | **R** | I | `src/ml_models.py`, `data/features/` |
-| **ЛР5** Neural | A | C | **R** | I | `src/neural_models.py`, `models/lstm/` |
-| **ЛР6** Validation / HPO | A | C | **R** | C | `docs/validation.md`, `models/best_model/` |
-| **ЛР7** Drift | A | C | **R** | **R** | `src/drift_analysis.py`, `docs/monitoring.md` |
-| **ЛР8** Deploy / CI | A | I | C | **R** | `Dockerfile`, `.github/workflows/`, `DEPLOY.md` |
+| **ЛР4** Stat diagnostics | A | C | **R** | I | `src/stat_models_param.py` |
+| **ЛР5** Regression | A | C | **R** | I | `src/r_models.py`, `data/features/` |
+| **ЛР6** ML | A | C | **R** | I | `src/ml_models.py` |
+| **ЛР7** Neural | A | C | **R** | I | `src/neural_models.py`, `models/lstm/` |
+| **ЛР8** Validation / drift | A | C | **R** | **R** | `docs/validation.md`, `src/drift_analysis.py`, `models/best_model/` |
+| **ЛР9** Deploy / CI | A | I | C | **R** | `Dockerfile`, `.github/workflows/`, MLflow, Airflow DAG |
+| **ЛР10** Monitoring | A | C | **R** | **R** | `src/mon.py`, `docs/monitoring.md` |
 | **COP** | A | C | **R** | I | submission + отчёт COP |
 | **PRC** | **R** (сборка) | C | C | **R** (demo) | MVP + презентация |
 
-На **ЛР7** Data помогает с симуляцией сдвига распределения; Lead ведёт протокол встречи с партнёром по метрикам деградации.
+На **ЛР8** Data помогает с симуляцией сдвига; на **ЛР10** MLOps ведёт observability, ML — пороги drift из ЛР8.
 
 ### 3.5. Еженедельный ритм по ролям
 
@@ -121,7 +123,7 @@
 | **Lead** | Stand-up (30 мин), обновление board/issues, статус партнёру раз в 2 нед. |
 | **Data** | PR по данным / EDA; актуальный `data/README.md` |
 | **ML** | PR по моделям; строка в таблице экспериментов |
-| **MLOps** | PR по инфраструктуре; `DEPLOY.md` актуален после ЛР8 |
+| **MLOps** | PR по инфраструктуре; `DEPLOY.md` актуален после ЛР9 |
 
 **Code review:** каждый PR ревьюит **не автор**; желательно ревью от роли, которой затронут модуль (Data ревьюит ML-features и т.д.).
 
@@ -131,8 +133,9 @@
 |-----------|---------------------|-----------|
 | ЛР1–2 | **Data** | Lead — постановка; ML — что нужно для моделей |
 | ЛР3–6 | **ML** | Data — качество данных; Lead — метрики vs партнёр |
-| ЛР7 | **ML** + **MLOps** (по 2–3 мин) | Data — сценарий сдвига |
-| ЛР8 / PRC | **MLOps** (demo) | Lead — итоги; ML — модель в production |
+| ЛР7 | **ML** | Data — sequence pipeline |
+| ЛР8 | **ML** + **MLOps** (по 2–3 мин) | Data — сценарий сдвига |
+| ЛР9–10 / PRC | **MLOps** (demo) | Lead — итоги; ML — модель в production |
 
 Преподаватель может задать вопрос **любому** участнику — ответ за пределами своей роли снижает оценку milestone.
 
@@ -166,7 +169,7 @@
 
 ---
 
-## 5. Этапы проекта и milestones ЛР1–8
+## 5. Этапы проекта и milestones ЛР1–10
 
 ### Этап 0. Инициация (недели 1–2)
 
@@ -174,92 +177,110 @@
 |----------|---------------|-----------|
 | Формирование команды, роли | Lead + преподаватель | Таблица ролей в уставе |
 | Kick-off с партнёром | Lead | Постановка, метрика |
-| Репозиторий | MLOps (скaffold) + все | README, структура, branch policy |
+| Репозиторий | MLOps (scaffold) + все | README, структура, branch policy |
 | Устав | Lead | [project_charter.md](templates/project_charter.md) |
 
 ---
 
-### ЛР1 — EDA (недели 2–3) · 5 %
+### ЛР1 — EDA (недели 2–3) · 4 %
 
 Опирается на [ЛР1](../M1-analysis-and-preparation/lab01_eda.md). **Data — R.**
 
-- [ ] `notebooks/01_eda.ipynb`, `docs/report/01_eda.md`
+- [ ] `notebooks/eda.ipynb`, `docs/report/01_eda.md`
 - [ ] Графики ряда, сезонности, ACF/PACF
 - [ ] Lead: партнёр подтвердил соответствие ряда задаче
 
 ---
 
-### ЛР2 — Preprocessing (недели 3–4) · 5 %
+### ЛР2 — Preprocessing (недели 3–4) · 4 %
 
 [ЛР2](../M1-analysis-and-preparation/lab02_preprocessing_decomposition.md). **Data — R**, ML — C.
 
 - [ ] `data/processed/`, `src/preprocessing.py`, `preprocessing_meta.json`
 - [ ] STL, ADF/KPSS; документированы пропуски и выбросы
 
-**ПЗ2** (стационарность) — **индивидуально**, не заменяет milestone.
+**ПЗ3** (стационарность) — **индивидуально**, не заменяет milestone.
 
 ---
 
-### ЛР3 — Statistical models (недели 5–6) · 5 %
+### ЛР3 — Statistical models (недели 5–6) · 4 %
 
 [ЛР3](../M2-statistical-and-ML-models/lab03_classical_statistical_models.md). **ML — R.**
 
 - [ ] Baseline + SARIMA/ES; `src/stat_models.py`
-- [ ] Диагностика остатков; таблица метрик v0
+- [ ] ACF/PACF на train; кандидат для ЛР4
 
 ---
 
-### ЛР4 — ML models (недели 6–7) · 5 %
+### ЛР4 — Stat diagnostics (недели 6–7) · 4 %
 
-[ЛР4](../M2-statistical-and-ML-models/lab04_regression_ml_models.md). **ML — R**, Data — C (features).
+[ЛР4](../M2-statistical-and-ML-models/lab04_statistical_diagnostics.md). **ML — R.**
 
-- [ ] `src/ml_models.py`, `data/features/`
-- [ ] Лаги, календарь, exog; сравнение с ЛР3
+- [ ] `src/stat_models_param.py`; подбор (p,d,q)(P,D,Q,s)
+- [ ] Диагностика остатков; финальная SARIMA
 
-**ПЗ3** (метрики) — индивидуально.
+**ПЗ4** (метрики) — индивидуально.
 
 ---
 
-### ЛР5 — Neural nets (недели 8–9) · 5 %
+### ЛР5 — Regression (недели 7–8) · 4 %
 
-[ЛР5](../M3-neural-networks/lab05_neural_networks.md). **ML — R.**
+[ЛР5](../M2-statistical-and-ML-models/lab05_regression_factor_models.md). **ML — R**, Data — C.
+
+- [ ] `src/r_models.py`, `data/features/`
+- [ ] Лаги, календарь, exog; сравнение с SARIMA
+
+---
+
+### ЛР6 — ML models (недели 8–9) · 4 %
+
+[ЛР6](../M2-statistical-and-ML-models/lab06_ml_models.md). **ML — R.**
+
+- [ ] `src/ml_models.py`; RF / XGBoost
+- [ ] Сравнение с ЛР3–5; лучший табличный baseline
+
+---
+
+### ЛР7 — Neural nets (недели 9–10) · 4 %
+
+[ЛР7](../M3-neural-networks/lab07_neural_networks.md). **ML — R.**
 
 - [ ] LSTM/GRU pipeline; `models/lstm/`
 
 ---
 
-### ЛР6 — Validation / HPO (недели 9–10) · 5 %
+### ЛР8 — Validation / drift (недели 10–11) · 4 %
 
-[ЛР6](../M3-neural-networks/lab06_validation_hyperparameters.md). **ML — R**, MLOps — C (артефакт model).
+[ЛР8](../M3-neural-networks/lab08_validation_drift.md). **ML — R**, MLOps — C.
 
 - [ ] Walk-forward, Optuna; `docs/validation.md`, `models/best_model/`
-- [ ] Обоснован выбор финальной модели
+- [ ] `src/drift_analysis.py`; правила retraining
 
 **COP (Forecast Cup)** — **ML — R** submission; Lead — отчёт COP.
 
 ---
 
-### ЛР7 — Drift (недели 11–12) · 5 %
+### ЛР9 — Deploy / CI (недели 12–13) · 4 %
 
-[ЛР7](../M4-infrastructure-and-deployment/lab07_stability_drift.md). **ML + MLOps — R.**
+[ЛР9](../M4-infrastructure-and-deployment/lab09_containerization_cicd.md), практики П1–П2. **MLOps — R.**
 
-- [ ] `src/drift_analysis.py`, `docs/monitoring.md`
-- [ ] Data/concept drift, PSI, план retraining
-
-**ПЗ4, ПЗ5** — индивидуально (дрейф, «сломай модель»).
-
----
-
-### ЛР8 — Deploy / CI (недели 13–14) · 5 %
-
-[ЛР8](../M4-infrastructure-and-deployment/lab08_containerization_cicd.md), практики П1–П3. **MLOps — R.**
-
-- [ ] REST API, Docker, CI; `DEPLOY.md`
+- [ ] REST API, Docker, CI; MLflow; `services/ml_service/` или `app/`
 - [ ] Smoke-test: преподаватель запускает за ≤ 5 мин
 
 ---
 
-### PRC — финальная защита (недели 15–16) · 30 %
+### ЛР10 — Monitoring (недели 13–14) · 4 %
+
+[ЛР10](../M4-infrastructure-and-deployment/lab10_monitoring.md), практика П3. **MLOps + ML — R.**
+
+- [ ] `monitoring/`, Evidently drift-report, DAG/Prefect flow, `docs/monitoring.md`
+- [ ] Метрики inference, алерты drift (пороги из ЛР8)
+
+**ПЗ5** («сломай модель») — индивидуально.
+
+---
+
+### PRC — финальная защита (недели 15–16) · 29 %
 
 | Артефакт | Ответственный |
 |----------|---------------|
@@ -279,7 +300,7 @@ project-team-name/
 ├── README.md                 # Кейс, команда, роли, quick start
 ├── docs/
 │   ├── project_charter.md    # Устав + таблица ролей
-│   ├── report/               # 01_eda.md … 08_deploy.md (milestones)
+│   ├── report/               # 01_eda.md … 10_monitoring.md (milestones)
 │   ├── validation.md
 │   ├── monitoring.md
 │   └── meetings/
@@ -291,9 +312,12 @@ project-team-name/
 ├── src/
 │   ├── preprocessing.py      # Data
 │   ├── stat_models.py        # ML
+│   ├── stat_models_param.py
+│   ├── r_models.py
 │   ├── ml_models.py
 │   ├── neural_models.py
-│   └── drift_analysis.py
+│   ├── drift_analysis.py
+│   └── mon.py                # MLOps
 ├── app/                        # MLOps
 ├── models/best_model/
 ├── tests/
@@ -330,8 +354,8 @@ MVP считается выполненным, если на защите **MLOp
 | Checkpoint | Вопрос | Кто отвечает |
 |------------|--------|--------------|
 | После ЛР1 | Достаточно ли данных для горизонта $h$? | Data |
-| После ЛР3 | Beat baseline? | ML |
-| После ЛР6 | Модель зафиксирована для deploy? | ML + MLOps |
+| После ЛР4 | Beat baseline? | ML |
+| После ЛР8 | Модель зафиксирована для deploy? | ML + MLOps |
 | Перед PRC | Demo без ручных правок? | MLOps |
 
 ### Типичные риски
@@ -341,14 +365,14 @@ MVP считается выполненным, если на защите **MLOp
 | Free-rider | RACI + peer-review + git log |
 | «Lead делает всё» | Lead только A, не R на всех ЛР |
 | Data bottleneck | ML помогает на ЛР2; ранний synthetic fallback |
-| MLOps только в конце | MLOps участвует с ЛР6 (контракт API, формат model artifact) |
+| MLOps только в конце | MLOps участвует с ЛР8 (контракт API, формат model artifact) |
 | Переобучение на test | ML ведёт единый `docs/validation.md` |
 
 ---
 
 ## 9. Формат сдачи
 
-### Milestones ЛР1–8
+### Milestones ЛР1–10
 
 По [шаблону](templates/milestone_report.md): 3–5 стр. на milestone + commit hash. Раздел подписывается **ответственным (R)**; Lead проверяет целостность перед сдачей.
 

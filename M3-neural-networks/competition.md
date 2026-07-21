@@ -290,8 +290,8 @@ A: Проверьте нулевые прогнозы; submission отклоня
 
 | COP | ЛР |
 |-----|-----|
-| Neural pipeline | [ЛР5](lab05_neural_networks.md) |
-| Walk-forward, HPO | [ЛР6](lab06_validation_hyperparameters.md) |
+| Neural pipeline | [ЛР7](lab07_neural_networks.md) |
+| Walk-forward, HPO, drift | [ЛР8](lab08_validation_drift.md) |
 | MAE, RMSE, SMAPE в отчёте | тема «Метрики качества» |
 
 Лучший pipeline COP можно перенести в `models/best_model/` для модуля 4.

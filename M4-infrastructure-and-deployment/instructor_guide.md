@@ -4,13 +4,13 @@
 
 | Неделя | Занятие | Фокус |
 |--------|---------|-------|
-| 13–14 | ЛР7 | Drift → PSI/KS → retraining → playbook |
+| 12–13 | [ЛР9](lab09_containerization_cicd.md) | Docker, CI/CD, MLflow, Airflow DAG |
+| 13–14 | [ЛР10](lab10_monitoring.md) | Inference metrics, drift alerts |
 | 15 | [П1](practice01_rest_api.md) | Контракт API → `/health`, `/predict`, pytest |
 | 15 | [П2](practice02_containerization.md) | Dockerfile → compose → reproducibility |
 | 16 | [П3](practice03_monitoring.md) | JSON logs → `/metrics` → MLflow → playbook |
-| 16 | [ЛР8](lab08_containerization_cicd.md) | CI/CD + интегральная защита |
 
-**На одной паре (2 ч):** П1 + начало П2. **На второй:** завершение П2 + П3 (или П3 + репетиция ЛР8).
+**На одной паре (2 ч):** П1 + начало П2. **На второй:** завершение П2 + П3 (или репетиция demo перед PRC).
 
 ## Практические занятия
 
@@ -22,26 +22,26 @@
 
 Сводная рубрика: [practice_rubrics.md](practice_rubrics.md).
 
-**Smoke-test на паре (преподаватель):** после П2 — `docker compose up` + curl; после П3 — logs + `/metrics`.
+**Smoke-test на паре (преподаватель):** после ЛР9 — `docker compose up` + curl; после ЛР10 — logs + `/metrics` + drift alert.
 
 ## Предварительные требования
 
 Студент должен иметь:
 
-- `models/best_model/` с моделью, scaler, `hparams.json`, `metrics.json`;
-- воспроизводимый inference из ЛР5–6.
+- `models/best_model/` из [ЛР8](../M3-neural-networks/lab08_validation_drift.md);
+- правила drift / retraining из ЛР8.
 
 При отсутствии — выдать эталонную модель, но без уровня «Продвинутый».
 
-## Защита ЛР8
+## Защита ЛР9–10
 
 Формат: 10 мин demo + 5 мин вопросы.
 
 1. `docker compose up` — сервис healthy.
 2. `curl /predict` → прогноз; `curl /metrics` → counters.
-3. JSON-лог последнего запроса (П3).
+3. JSON-лог последнего запроса (ЛР10).
 4. Green CI run (GitHub Actions).
-5. Playbook: «MAE +30%» — первые 3 шага (связь ЛР7 + П3).
+5. Playbook: «MAE +30%» — первые 3 шага (связь ЛР8 + ЛР10).
 
 ## Типичные ошибки
 
@@ -54,9 +54,11 @@
 
 ## Связь с PRC
 
-ЛР7 может быть связана с проектным кейсом (PRC): студенты предлагают сценарий «Сломай модель» для чужого сервиса.
+ЛР10 и **ПЗ5** могут быть связаны с проектным кейсом (PRC): студенты предлагают сценарий «Сломай модель» для чужого сервиса.
 
 ## Оценивание
+
+Каждая ЛР — **4 %** дисциплины. Уровни Б/С/П — см. [grading.md](../docs/grading.md).
 
 | Уровень | % |
 |---------|---|

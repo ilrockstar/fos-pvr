@@ -72,22 +72,24 @@
 
 ---
 
-## 3. Milestone-рубрики (ЛР1–8, вариант A)
+## 3. Milestone-рубрики (ЛР1–10, вариант A)
 
-Каждая ЛР оценивается **отдельно** (5 % дисциплины). Уровни Б/С/П — см. [grading.md](../docs/grading.md).
+Каждая ЛР оценивается **отдельно** (4 % дисциплины). Уровни Б/С/П — см. [grading.md](../docs/grading.md).
 
 | ЛР | Ответственная роль | Б (60 %) | С (80 %) | П (100 %) |
 |----|-------------------|----------|----------|-----------|
 | **ЛР1** EDA | Data | Данные + график ряда | + ACF/PACF, сезонность | + предметные выводы, воспроизводимость |
 | **ЛР2** Preprocessing | Data | `processed/`, базовая очистка | + STL, ADF/KPSS | + pipeline в `src/preprocessing.py` |
-| **ЛР3** Statistical | ML | Baseline + 1 stat model | + диагностика остатков | + обоснованный порядок ARIMA |
-| **ЛР4** ML | ML | 1 ML-модель, метрики | + лаги/exog, сравнение с ЛР3 | + feature pipeline |
-| **ЛР5** Neural | ML | LSTM/GRU обучается | + сравнение с ЛР3–4 | + стабильный training pipeline |
-| **ЛР6** Validation | ML | Walk-forward / split | + HPO, `best_model` | + Optuna, нет утечек |
-| **ЛР7** Drift | ML + MLOps | Описан drift | + `monitoring.md`, симуляция | + PSI/MAE, plan retraining |
-| **ЛР8** Deploy | MLOps | API локально | + Docker + `DEPLOY.md` | + CI green, pytest |
+| **ЛР3** Statistical | ML | Baseline + 1 stat model | + SARIMA/ES, ACF/PACF | + обоснованный начальный порядок |
+| **ЛР4** Stat diagnostics | ML | Подбор параметров | + AIC/BIC, диагностика остатков | + финальная SARIMA зафиксирована |
+| **ЛР5** Regression | ML | Linear/Ridge | + лаги/exog, сравнение с ЛР4 | + feature table для ЛР6 |
+| **ЛР6** ML | ML | 1 ML-модель | + RF/XGBoost, vs stat | + feature pipeline |
+| **ЛР7** Neural | ML | LSTM/GRU обучается | + сравнение с ЛР3–6 | + стабильный training pipeline |
+| **ЛР8** Validation / drift | ML + MLOps | Walk-forward / split | + HPO, `best_model`, drift rules | + Optuna, PSI, plan retraining |
+| **ЛР9** Deploy | MLOps | API + Docker + MLflow | + multi-stage Dockerfile, CI | + Swagger, demo без правок |
+| **ЛР10** Monitoring | MLOps + ML | QualityMonitor + drift HTML | + Evidently UI, playbook | + auto-retrain + deploy в API |
 
-**PRC (30 %)** — сводная rubric §1 (критерии A–F). **Не дублирует** сумму ЛР; оценивает **целостность MVP** на защите.
+**PRC (29 %)** — сводная rubric §1 (критерии A–F). **Не дублирует** сумму ЛР; оценивает **целостность MVP** на защите.
 
 ---
 
