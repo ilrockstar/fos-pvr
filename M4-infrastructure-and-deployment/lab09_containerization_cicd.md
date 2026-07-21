@@ -5,8 +5,7 @@
 **Комpetence:** LC-5.1, LC-5.2, ML-5.1, ML-5.2 (С–П)  
 **Время:** 1 ч лекция + 1 ч лабораторная (+ 4 ч самостоятельной работы; активное использование пререквизитов по Docker)
 
-> **Milestone команды (3–4 чел.):** REST API, `Dockerfile`, `docker-compose.yml`, интеграция **MLflow Model Registry**, `DEPLOY.md`. Вес: **4 %** — [docs/grading.md](../docs/grading.md).  
-> Источник методики: [lr9.pdf](../lr9.pdf)
+> **Milestone команды (3–4 чел.):** REST API, `Dockerfile`, `docker-compose.yml`, интеграция **MLflow Model Registry**, `DEPLOY.md`. Вес: **4 %** — [docs/grading.md](../docs/grading.md).
 
 ---
 

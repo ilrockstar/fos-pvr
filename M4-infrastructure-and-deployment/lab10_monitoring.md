@@ -5,8 +5,7 @@
 **Комpetence:** LC-5.1, LC-5.2, ML-5.1, ML-5.2, ML-2.2 (С–П)  
 **Время:** 1 ч лекция + 2 ч лабораторная (+ 4 ч самостоятельной работы)
 
-> **Milestone команды (3–4 чел.):** мониторинг качества, детекция drift (Evidently), дашборд, пайплайн ретренинга (Airflow / Prefect), `docs/monitoring.md`. Вес: **4 %** — [docs/grading.md](../docs/grading.md).  
-> Источник методики: [lr10.pdf](../lr10.pdf)
+> **Milestone команды (3–4 чел.):** мониторинг качества, детекция drift (Evidently), дашборд, пайплайн ретренинга (Airflow / Prefect), `docs/monitoring.md`. Вес: **4 %** — [docs/grading.md](../docs/grading.md).
 
 ---
 
@@ -167,7 +166,7 @@ evidently ui --host 0.0.0.0 --port 8080
 
 **Вариант Б — Grafana + Prometheus** *(продвинутый)*
 
-Используйте `docker-compose.monitoring.yml` с сервисами evidently-service, prometheus, grafana (см. [lr10.pdf](../lr10.pdf), §4).
+Используйте `docker-compose.monitoring.yml` с сервисами evidently-service, prometheus, grafana.
 
 ### Этап 5. Пайплайн ретренинга (Prefect / Airflow)
 

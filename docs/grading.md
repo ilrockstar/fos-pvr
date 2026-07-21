@@ -4,8 +4,6 @@
 **Архитектура ФОС:** лабораторные работы как **milestones единого группового проекта** (3–4 человека)  
 **Форма промежуточной аттестации:** дифференцированный зачёт
 
-> Актуальная тематика ЛР: [labs-update.pdf](../labs-update.pdf)
-
 ---
 
 ## 1. Структура итоговой оценки
@@ -91,4 +89,3 @@ $$\text{Балл}_{ЛР_i} = 4\% \times \frac{\text{Уровень \%}}{100}$$
 
 - [measurement_model.md](measurement_model.md)
 - [practical_assignments.md](practical_assignments.md)
-- [labs-update.pdf](../labs-update.pdf)

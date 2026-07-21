@@ -34,7 +34,7 @@
 | Относительные Markdown-ссылки | ✅ | 275 проверено; 0 битых (после добавления resources/README, правки LICENSE) |
 | Временные файлы Office | ✅ | `~$*`, `*.tmp` не найдены |
 | .DS_Store | ⚠️ | Добавлен [.gitignore](../.gitignore); локальные `.DS_Store` удалить из git при коммите |
-| Крупные файлы | ✅ | presentation_itmo.pdf ~3.7 MB (< лимита GitHub 100 MB) |
+| Крупные файлы | ✅ | Самый крупный: `data/krm-v3.0.xlsx` (~413 KB, < лимита GitHub 100 MB) |
 
 ---
 
@@ -78,4 +78,4 @@
 | Дата | Действие |
 |------|----------|
 | 2026-07-20 | Первичный аудит; исправлены rpd, resources, methodical-guidelines, LICENSE, links, rubrics LR1–8 |
-| 2026-07-21 | Обновление до 10 ЛР по labs-update.pdf; grading 10×4%, новые lab03–lab10 |
+| 2026-07-21 | Обновление до 10 ЛР; grading 10×4%, новые lab03–lab10 |
