@@ -20,7 +20,6 @@
 
 - Остаточные знания по дисциплинам «Веб-программирование» и «Основы контейнеризации»: синтаксис Dockerfile, HTTP REST (GET/POST).
 - В качестве основы — лучшая модель из [ЛР6–8](../M3-neural-networks/lab08_validation_drift.md): ARIMA, boosting или LSTM; артефакт `models/best_model/`.
-- Рекомендуется использовать код из [Практики 1](practice01_rest_api.md) и [Практики 2](practice02_containerization.md).
 
 **Стек:** FastAPI, Pydantic, Docker / docker-compose, MLflow (инференс — statsmodels / sklearn / PyTorch по типу модели команды).
 
@@ -409,6 +408,5 @@ curl -X POST http://localhost:8000/predict \
 | Элемент | Связь |
 |---------|-------|
 | [ЛР8](../M3-neural-networks/lab08_validation_drift.md) | Модель `best_model`, MLflow run |
-| [П1–П2](practice01_rest_api.md) | Контракт API, Docker — можно переиспользовать код |
 | [ЛР10](lab10_monitoring.md) | Сервис из этой ЛР — основа для мониторинга |
 | [PRC](../Project/project_guidelines.md) | Live demo MVP на защите |

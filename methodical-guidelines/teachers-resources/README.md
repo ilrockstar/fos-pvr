@@ -30,7 +30,7 @@
 | M1 | FPP3 (Hyndman), главы 2–3 | ЛР1–2, ПЗ2–3 |
 | M2 | Statsmodels TSA, sklearn time series | ЛР3–6, ПЗ4 |
 | M3 | PyTorch RNN tutorials, Optuna docs | ЛР7–8, COP |
-| M4 | FastAPI, Docker, MLflow docs | ЛР9–10, практики, ПЗ5 |
+| M4 | FastAPI, Docker, MLflow docs | ЛР9–10, ПЗ5 |
 
 Перед семестром проверьте **работоспособность URL** из [resources/README.md](../../resources/README.md).
 

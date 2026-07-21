@@ -2,7 +2,7 @@
 
 **Дисциплина:** Прогнозирование временных рядов: от статистики до MLOps  
 **КРМ:** версия 3.0  
-**Архитектура:** вариант A — **групповой сквозной проект**, ЛР = milestones (10 шт.)
+**Архитектура ФОС:** **групповой сквозной проект**, ЛР = milestones (10 шт.)
 
 > Актуальная тематика: [labs-update.pdf](../labs-update.pdf)
 
@@ -27,16 +27,14 @@
 | **BD 1.3** Обработка и подготовка данных | ЛР2 | ПЗ3 | — | ✓ | — | 3 |
 | **ML-2.2** Интерпретация результатов моделей | ЛР3–6 | ПЗ4 | — | ✓ | — | 3 |
 | **ML-2.3** Визуализация и коммуникация | ЛР2,5,8,10 | — | — | ✓ | ✓ | 3 |
-| **ML-3.1** Реализация ML-моделей | ЛР1,3,5,7* | — | ✓ | ✓ | — | 3 |
+| **ML-3.1** Реализация ML-моделей | ЛР1,3,5,7* | ПЗ1 | ✓ | ✓ | — | 3 |
 | **ML-3.2** Настройка и оптимизация | ЛР4–8 | ПЗ4 | ✓ | — | — | 3 |
 | **ML-5.1** Анализ устойчивости | ЛР8 | ПЗ5 | ✓ | ✓ | — | 3 |
 | **ML-5.2** Управление дрейфом | ЛР8, ЛР10 | ПЗ5 | ✓ | ✓ | — | 3 |
-| **LC-5.1** Проектирование сервисов | ЛР9, П1 | ПЗ5 | — | ✓ | ✓ | 4 |
-| **LC-5.2** CI/CD и автоматизация | ЛР9, П2 | — | — | ✓ | — | 3 |
+| **LC-5.1** Проектирование сервисов | ЛР9, ЛР10 | ПЗ5 | — | ✓ | ✓ | 4 |
+| **LC-5.2** CI/CD и автоматизация | ЛР9, ЛР10 | — | — | ✓ | — | 3 |
 
 \*ЛР7 — нейросетевые модели; ЛР8 — валидация и HPO для всех классов моделей.
-
-**П1–П3** — [практики M4](../M4-infrastructure-and-deployment/README.md) (REST API, Docker, мониторинг).
 
 ---
 
@@ -59,13 +57,13 @@
 
 ## 4. Практические задания (ПЗ)
 
-| ПЗ | Комpetence | Роль | КИМ |
-|----|------------|------|-----|
-| ПЗ1 Остаточные знания ML | ML-3.1 | все | [quiz_pz1](../M1-analysis-and-preparation/quiz_pz1_ml_basics.md) |
-| ПЗ2 Структура ряда | BD 1.2 | Data Analyst | [quiz_pz01](../M1-analysis-and-preparation/quiz_pz01_structure.md) |
-| ПЗ3 Стационарность | BD 1.3 | Data Analyst | [quiz_pz02](../M1-analysis-and-preparation/quiz_pz02_stationarity.md) |
-| ПЗ4 Метрики | ML-2.2 | ML Engineer / Researcher | [quiz_pz03](../M2-statistical-and-ML-models/quiz_pz03_metrics.md) |
-| ПЗ5 Сломай модель | ML-5.2 | ML Researcher / MLOps | [pz05](../M4-infrastructure-and-deployment/pz05_break_the_model.md) |
+| ПЗ | Модуль | Комpetence | Роль | КИМ |
+|----|--------|------------|------|-----|
+| ПЗ1 Остаточные знания ML | M1 | ML-3.1, BD 1.2 | все | [quiz_pz1](../M1-analysis-and-preparation/quiz_pz1_ml_basics.md) |
+| ПЗ2 Структура ряда | M1 | BD 1.2 | Data Analyst | [quiz_pz01](../M1-analysis-and-preparation/quiz_pz01_structure.md) |
+| ПЗ3 Стационарность | M1 | BD 1.3 | Data Analyst | [quiz_pz02](../M1-analysis-and-preparation/quiz_pz02_stationarity.md) |
+| ПЗ4 Метрики | M2 | ML-2.2 | ML Engineer / Researcher | [quiz_pz03](../M2-statistical-and-ML-models/quiz_pz03_metrics.md) |
+| ПЗ5 Сломай модель | M4 | ML-2.2, ML-5.2 | ML Researcher / MLOps | [pz05](../M4-infrastructure-and-deployment/pz05_break_the_model.md) |
 
 ---
 
@@ -93,7 +91,7 @@
 
 | Индикатор | Модули / КИМ |
 |-----------|--------------|
-| REST API, Docker | M4 П1, ЛР9 |
+| REST API, Docker | M4 ЛР9–10 |
 | CI/CD, MLflow | M4 ЛР9 |
 | Drift monitoring | M3 ЛР8, M4 ЛР10 |
 | Playbook retraining | M4 ЛР10, PRC |

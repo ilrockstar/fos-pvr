@@ -1,7 +1,7 @@
 # Методические указания обучающимся
 
 **Дисциплина:** Прогнозирование временных рядов: от статистики до MLOps  
-**Архитектура:** вариант A — [project_guidelines.md](../../Project/project_guidelines.md)
+**Архитектура ФОС:** [project_guidelines.md](../../Project/project_guidelines.md)
 
 ---
 

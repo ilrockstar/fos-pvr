@@ -4,25 +4,12 @@
 
 | Неделя | Занятие | Фокус |
 |--------|---------|-------|
-| 12–13 | [ЛР9](lab09_containerization_cicd.md) | Docker, CI/CD, MLflow, Airflow DAG |
-| 13–14 | [ЛР10](lab10_monitoring.md) | Inference metrics, drift alerts |
-| 15 | [П1](practice01_rest_api.md) | Контракт API → `/health`, `/predict`, pytest |
-| 15 | [П2](practice02_containerization.md) | Dockerfile → compose → reproducibility |
-| 16 | [П3](practice03_monitoring.md) | JSON logs → `/metrics` → MLflow → playbook |
+| 12–13 | [ЛР9](lab09_containerization_cicd.md) | REST API, Docker, CI/CD, MLflow, Airflow DAG |
+| 13–14 | [ЛР10](lab10_monitoring.md) | Inference metrics, drift alerts, retraining |
+| 15 | [ПЗ5](pz05_break_the_model.md) | Кейс «Сломай модель» (индивидуально) |
+| 15–16 | PRC | Финальная защита MVP |
 
-**На одной паре (2 ч):** П1 + начало П2. **На второй:** завершение П2 + П3 (или репетиция demo перед PRC).
-
-## Практические занятия
-
-| Практика | Время на паре | Дома | Критерии |
-|----------|---------------|------|----------|
-| П1 | 60 мин | тесты, OpenAPI | [practice01](practice01_rest_api.md) |
-| П2 | 60 мин | reproducibility checklist | [practice02](practice02_containerization.md) |
-| П3 | 90–120 мин | MLflow, симуляция алерта | [practice03](practice03_monitoring.md) |
-
-Сводная рубрика: [practice_rubrics.md](practice_rubrics.md).
-
-**Smoke-test на паре (преподаватель):** после ЛР9 — `docker compose up` + curl; после ЛР10 — logs + `/metrics` + drift alert.
+**Smoke-test на паре (преподаватель):** после ЛР9 — `docker compose up` + curl `/health`, `/predict`; после ЛР10 — logs + `/metrics` + drift alert.
 
 ## Предварительные требования
 

@@ -171,5 +171,5 @@ print("MAE:", mean_absolute_error(test["load_mwh"], pred))
 |---------|-------|
 | [ЛР4](lab04_statistical_diagnostics.md) | Baseline SARIMA |
 | [ЛР6](lab06_ml_models.md) | Feature table → ML |
-| [M2/quiz.md](quiz.md) | Формативный квиз (лаги, exog) |
+| [ПЗ4](quiz_pz03_metrics.md) | Метрики качества (индив.) |
 | [Project](../Project/project_guidelines.md) | ML — R; Data — C (features) |

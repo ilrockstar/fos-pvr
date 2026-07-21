@@ -1,6 +1,6 @@
 # Модуль 3. Нейросетевые модели и оценка устойчивости
 
-**Архитектура A:** ЛР7–8 — milestones группового проекта; COP — параллельно.
+**Формат ФОС:** ЛР7–8 — milestones группового проекта; COP — параллельно.
 
 **Дисциплина:** Прогнозирование временных рядов: от статистики до MLOps  
 **Компетенции КРМ:** ML-3.2 (П), ML-3.1 (С), ML-5.1, ML-5.2
@@ -17,7 +17,7 @@
 | [ЛР8](lab08_validation_drift.md) | Валидация, HPO, дрейф | Walk-forward, Optuna, PSI | Milestone, 4 % |
 | [Forecast Cup](competition.md) | COP | … | 15 % |
 
-> Квиз «Дрейф» (бывший отдельный ПЗ) включён в содержание **ЛР8**. Формативный [quiz_pz04_drift.md](quiz_pz04_drift.md) — для самопроверки.
+> Тема drift — в содержании **ЛР8** и кейсе **ПЗ5**.
 
 ---
 
@@ -37,6 +37,4 @@
 | [lab08_validation_drift.md](lab08_validation_drift.md) | ЛР8: validation, HPO, drift |
 | [competition.md](competition.md) | Forecast Cup (COP) |
 | [competition/](competition/) | Scoring, baselines |
-| [quiz_pz04_drift.md](quiz_pz04_drift.md) | Формативный квиз по drift |
-| [quiz_pz04_key.md](quiz_pz04_key.md) | Ключ (преподаватель) |
 | [instructor_guide.md](instructor_guide.md) | Методические рекомендации |

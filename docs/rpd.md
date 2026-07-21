@@ -1,7 +1,7 @@
 # Рабочая программа дисциплины
 
 > Markdown-версия для репозитория ФОС. Полная редакция: [rpd.docx](rpd.docx).  
-> Архитектура оценивания: **вариант A** — [grading.md](grading.md).
+> Архитектура оценивания — [grading.md](grading.md).
 
 ---
 
@@ -64,7 +64,7 @@
 | M1. Анализ и подготовка ВР | EDA, preprocessing, STL, ADF/KPSS | Milestone ЛР1–2, ПЗ2–3 | 16 ч | BD-1.2, BD-1.3, ML-2.2 | [M1](../M1-analysis-and-preparation/) |
 | M2. Статистические и ML-модели | ARIMA/SARIMA, регрессия, boosting | Milestone ЛР3–6, ПЗ4 | 16 ч | ML-3.1, ML-3.2, ML-2.2 | [M2](../M2-statistical-and-ML-models/) |
 | M3. Нейросети и устойчивость | LSTM/GRU, HPO, drift, COP | Milestone ЛР7–8, COP | 16 ч | ML-3.2, ML-5.1, ML-5.2 | [M3](../M3-neural-networks/) |
-| M4. Инфраструктура и деплой | API, Docker, CI/CD, мониторинг | Milestone ЛР9–10, ПЗ5, практики | 16 ч | LC-5.1, LC-5.2 | [M4](../M4-infrastructure-and-deployment/) |
+| M4. Инфраструктура и деплой | API, Docker, CI/CD, мониторинг | Milestone ЛР9–10, ПЗ5 | 16 ч | LC-5.1, LC-5.2 | [M4](../M4-infrastructure-and-deployment/) |
 | PRC | Финальная защита MVP | Защита + peer-review | — | все | [Project](../Project/) |
 
 Полная матрица competence × КИМ: [measurement_model.md](measurement_model.md).

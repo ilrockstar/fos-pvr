@@ -237,5 +237,5 @@ def psi(expected, actual, buckets=10):
 | [ЛР7](lab07_neural_networks.md) | Базовая neural model |
 | [ЛР9–10](../M4-infrastructure-and-deployment/lab09_containerization_cicd.md) | Deploy + monitoring |
 | [COP](competition.md) | Submission может использовать best_model |
-| [quiz_pz04_drift.md](quiz_pz04_drift.md) | Формативный квиз по drift |
+| [ПЗ5](../M4-infrastructure-and-deployment/pz05_break_the_model.md) | Кейс «Сломай модель» |
 | [Project](../Project/project_guidelines.md) | ML + MLOps — R за drift |

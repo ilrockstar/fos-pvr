@@ -54,15 +54,15 @@ $$\text{Балл}_{ЛР_i} = 4\% \times \frac{\text{Уровень \%}}{100}$$
 
 ## 3. Практические задания (ПЗ1–ПЗ5) — 10 %
 
-| ПЗ | Неделя | Название | Файл |
-|----|--------|----------|------|
-| ПЗ1 | 1 | Квиз «Остаточные знания по ML» | [quiz_pz1](../M1-analysis-and-preparation/quiz_pz1_ml_basics.md) |
-| ПЗ2 | 2 | Квиз «Структура ряда» | [quiz_pz01](../M1-analysis-and-preparation/quiz_pz01_structure.md) |
-| ПЗ3 | 4 | Квиз «Стационарность» | [quiz_pz02](../M1-analysis-and-preparation/quiz_pz02_stationarity.md) |
-| ПЗ4 | 7 | Квиз «Метрики качества» | [quiz_pz03](../M2-statistical-and-ML-models/quiz_pz03_metrics.md) |
-| ПЗ5 | 15 | Кейс «Сломай модель» | [pz05](../M4-infrastructure-and-deployment/pz05_break_the_model.md) |
+| ПЗ | Неделя | Модуль | Название | Файл |
+|----|--------|--------|----------|------|
+| ПЗ1 | 1 | M1 | Квиз «Остаточные знания по ML» | [quiz_pz1](../M1-analysis-and-preparation/quiz_pz1_ml_basics.md) |
+| ПЗ2 | 2 | M1 | Квиз «Структура ряда» | [quiz_pz01](../M1-analysis-and-preparation/quiz_pz01_structure.md) |
+| ПЗ3 | 4 | M1 | Квиз «Стационарность» | [quiz_pz02](../M1-analysis-and-preparation/quiz_pz02_stationarity.md) |
+| ПЗ4 | 7 | M2 | Квиз «Метрики качества» | [quiz_pz03](../M2-statistical-and-ML-models/quiz_pz03_metrics.md) |
+| ПЗ5 | 15 | M4 | Кейс «Сломай модель» | [pz05](../M4-infrastructure-and-deployment/pz05_break_the_model.md) |
 
-> Квиз «Дрейф» (бывший ПЗ4) включён в содержание **ЛР8**. Формативный [M2/quiz.md](../M2-statistical-and-ML-models/quiz.md) — к ЛР5–6.
+> Тема drift — в **ЛР8** и кейсе **ПЗ5**.
 
 ---
 
