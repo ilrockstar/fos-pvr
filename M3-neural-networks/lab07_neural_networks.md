@@ -122,7 +122,7 @@ model.save("models/lstm/model.keras")
 | Последовательности, scaler fit на train | 0,6 |
 | LSTM/GRU обучена, EarlyStopping | 0,8 |
 | Метрики на test (MAE, RMSE, SMAPE) | 0,6 |
-| Сравнение с SARIMA и ML | 0,5 |
+| Сравнение с SARIMA , ML и LSTM  | 0,5 |
 | LSTM vs GRU, `neural_models.py` | 0,3 |
 | Качество отчёта и защита | 1,2 |
 | **Итого** | **4,0** |
