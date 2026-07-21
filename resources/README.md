@@ -11,7 +11,7 @@
 |--------|------------|--------|
 | КРМ v3.0 (исходник) | Коды competence и индикаторов | [data/krm-v3.0.xlsx](../data/krm-v3.0.xlsx) |
 | Рабочая программа | Цели, задачи, объём | [docs/rpd.md](../docs/rpd.md), [docs/rpd.docx](../docs/rpd.docx) |
-| Модель измерения | Комpetence × КИМ | [docs/measurement_model.md](../docs/measurement_model.md) |
+| Модель измерения | Компетенции × КИМ | [docs/measurement_model.md](../docs/measurement_model.md) |
 
 ---
 

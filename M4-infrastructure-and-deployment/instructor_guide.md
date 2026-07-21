@@ -6,7 +6,7 @@
 |--------|---------|-------|
 | 12–13 | [ЛР9](lab09_containerization_cicd.md) | REST API, Docker, CI/CD, MLflow, Airflow DAG |
 | 13–14 | [ЛР10](lab10_monitoring.md) | Inference metrics, drift alerts, retraining |
-| 15 | [ПЗ5](pz05_break_the_model.md) | Кейс «Сломай модель» (индивидуально) |
+| 13–14 | [ПЗ5](pz05_break_the_model.md) | Кейс «Сломай модель» (2 нед., индив.) |
 | 15–16 | PRC | Финальная защита MVP |
 
 **Smoke-test на паре (преподаватель):** после ЛР9 — `docker compose up` + curl `/health`, `/predict`; после ЛР10 — logs + `/metrics` + drift alert.

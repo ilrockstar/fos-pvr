@@ -17,9 +17,9 @@
 
 ---
 
-## 2. Матрица «Компетенце × оценочное средство»
+## 2. Матрица «Компетенции × оценочное средство»
 
-| Комpetence | ЛР (milestones) | ПЗ / квизы | COP | PRC | Peer | Σ КИМ |
+| Компетенции | ЛР (milestones) | ПЗ / квизы | COP | PRC | Peer | Σ КИМ |
 |------------|-----------------|------------|-----|-----|------|-------|
 | **BD 1.2** Анализ данных и визуализация | ЛР1 | ПЗ2 | — | ✓ | — | 3 |
 | **BD 1.3** Обработка и подготовка данных | ЛР2 | ПЗ3 | — | ✓ | — | 3 |
@@ -38,7 +38,7 @@
 
 ## 3. Детализация по лабораторным (milestones)
 
-| ЛР | Milestone | Комpetence | Индикаторы (дескриптор) | КИМ |
+| ЛР | Milestone | Компетенции | Индикаторы (дескриптор) | КИМ |
 |----|-----------|------------|-------------------------|-----|
 | **ЛР1** | EDA | BD 1.2, ML-2.3 | EDA, ACF/PACF, тренд/сезонность, аномалии | [lab01](../M1-analysis-and-preparation/lab01_eda.md) |
 | **ЛР2** | Preprocessing | BD 1.3, ML-2.3 | Пропуски, выбросы, STL, ADF/KPSS | [lab02](../M1-analysis-and-preparation/lab02_preprocessing_decomposition.md) |
@@ -55,13 +55,13 @@
 
 ## 4. Практические задания (ПЗ)
 
-| ПЗ | Модуль | Комpetence | Роль | КИМ |
+| ПЗ | Модуль | Компетенции | Роль | КИМ |
 |----|--------|------------|------|-----|
 | ПЗ1 Остаточные знания ML | M1 | ML-3.1, BD 1.2 | все | [quiz_pz1](../M1-analysis-and-preparation/quiz_pz1_ml_basics.md) |
 | ПЗ2 Структура ряда | M1 | BD 1.2 | Data Analyst | [quiz_pz01](../M1-analysis-and-preparation/quiz_pz01_structure.md) |
 | ПЗ3 Стационарность | M1 | BD 1.3 | Data Analyst | [quiz_pz02](../M1-analysis-and-preparation/quiz_pz02_stationarity.md) |
 | ПЗ4 Метрики | M2 | ML-2.2 | ML Engineer / Researcher | [quiz_pz03](../M2-statistical-and-ML-models/quiz_pz03_metrics.md) |
-| ПЗ5 Сломай модель | M4 | ML-2.2, ML-5.2 | ML Researcher / MLOps | [pz05](../M4-infrastructure-and-deployment/pz05_break_the_model.md) |
+| ПЗ5 Сломай модель | M4 | ML-5.2, LC-5.1, LC-5.2 | ML Researcher / MLOps | [pz05](../M4-infrastructure-and-deployment/pz05_break_the_model.md) |
 
 ---
 

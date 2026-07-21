@@ -13,7 +13,7 @@
 |---------|------|------------|----------------|
 | [ЛР9](lab09_containerization_cicd.md) | Контейнеризация, REST API, CI/CD | Docker, API, CI, MLflow | Milestone, 4 % |
 | [ЛР10](lab10_monitoring.md) | Мониторинг, drift, ретренинг | Evidently, дашборд, Airflow/Prefect | Milestone, 4 % |
-| [ПЗ5](pz05_break_the_model.md) | «Сломай модель» | Сценарий деградации модели | 2 %, индив. |
+| [ПЗ5](pz05_break_the_model.md) | «Сломай модель» | Симуляция drift, retrain (индив.) | 2 %, индив. |
 
 ---
 

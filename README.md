@@ -69,13 +69,23 @@
 
 Практические задания ПЗ1–ПЗ5: [docs/practical_assignments.md](docs/practical_assignments.md).
 
-| № | Модуль | Компетенце (пример) | Форма | КИМ |
-|---|--------|---------------------|-------|-----|
-| 1 | M1 | BD 1.2, BD 1.3 | Milestone ЛР1–2, ПЗ1–3 | [M1](M1-analysis-and-preparation/README.md) |
-| 2 | M2 | ML-3.1, ML-3.2 | Milestone ЛР3–6, ПЗ4 | [M2](M2-statistical-and-ML-models/README.md) |
-| 3 | M3 | ML-3.2, ML-5.x | Milestone ЛР7–8, COP | [M3](M3-neural-networks/README.md) |
-| 4 | M4 | LC-5.x | Milestone ЛР9–10, ПЗ5 | [M4](M4-infrastructure-and-deployment/README.md) |
-| — | PRC | все | Защита MVP + [peer-review](Project/peer_review.md) | [Project](Project/README.md) |
+| ЛР / КИМ | Модуль | Компетенции | Форма оценивания | Материал |
+|----------|--------|-------------|------------------|----------|
+| ЛР1 | M1 | BD 1.2, ML-2.3 | Milestone, 4 % | [lab01](M1-analysis-and-preparation/lab01_eda.md) |
+| ЛР2 | M1 | BD 1.3, ML-2.3 | Milestone, 4 % | [lab02](M1-analysis-and-preparation/lab02_preprocessing_decomposition.md) |
+| ЛР3 | M2 | ML-3.1, ML-3.2 | Milestone, 4 % | [lab03](M2-statistical-and-ML-models/lab03_classical_statistical_models.md) |
+| ЛР4 | M2 | ML-3.2, ML-2.2 | Milestone, 4 % | [lab04](M2-statistical-and-ML-models/lab04_statistical_diagnostics.md) |
+| ЛР5 | M2 | ML-3.1, ML-2.2 | Milestone, 4 % | [lab05](M2-statistical-and-ML-models/lab05_regression_factor_models.md) |
+| ЛР6 | M2 | ML-3.1, ML-3.2 | Milestone, 4 % | [lab06](M2-statistical-and-ML-models/lab06_ml_models.md) |
+| ЛР7 | M3 | ML-3.1, ML-2.3 | Milestone, 4 % | [lab07](M3-neural-networks/lab07_neural_networks.md) |
+| ЛР8 | M3 | ML-3.2, ML-5.1, ML-5.2 | Milestone, 4 % | [lab08](M3-neural-networks/lab08_validation_drift.md) |
+| ЛР9 | M4 | LC-5.1, LC-5.2 | Milestone, 4 % | [lab09](M4-infrastructure-and-deployment/lab09_containerization_cicd.md) |
+| ЛР10 | M4 | ML-5.2, LC-5.1 | Milestone, 4 % | [lab10](M4-infrastructure-and-deployment/lab10_monitoring.md) |
+| ПЗ1–3 | M1 | BD 1.2, BD 1.3, ML-3.1 | Квизы, 6 % | [M1](M1-analysis-and-preparation/README.md) |
+| ПЗ4 | M2 | ML-2.2 | Квиз, 2 % | [quiz_pz03](M2-statistical-and-ML-models/quiz_pz03_metrics.md) |
+| ПЗ5 | M4 | ML-5.2, LC-5.1, LC-5.2 | Кейс, 2 % | [pz05](M4-infrastructure-and-deployment/pz05_break_the_model.md) |
+| COP | M3 | ML-3.1, ML-3.2 | Соревнование, 15 % | [competition](M3-neural-networks/competition.md) |
+| PRC | — | все | Защита MVP, 29 % + [peer-review](Project/peer_review.md) 6 % | [Project](Project/README.md) |
 
 ## 3. Контрольно-измерительные материалы
 
@@ -104,7 +114,7 @@
 
 ## 6. Команда
 
-Сведения об авторах доступна в разделе [«Команда проекта»](team/README.md). 
+Сведения об авторах доступны в разделе [«Команда проекта»](team/README.md).
 
 ## 7. Лицензия
 

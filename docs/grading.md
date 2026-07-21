@@ -58,9 +58,9 @@ $$\text{Балл}_{ЛР_i} = 4\% \times \frac{\text{Уровень \%}}{100}$$
 | ПЗ2 | 2 | M1 | Квиз «Структура ряда» | [quiz_pz01](../M1-analysis-and-preparation/quiz_pz01_structure.md) |
 | ПЗ3 | 4 | M1 | Квиз «Стационарность» | [quiz_pz02](../M1-analysis-and-preparation/quiz_pz02_stationarity.md) |
 | ПЗ4 | 7 | M2 | Квиз «Метрики качества» | [quiz_pz03](../M2-statistical-and-ML-models/quiz_pz03_metrics.md) |
-| ПЗ5 | 15 | M4 | Кейс «Сломай модель» | [pz05](../M4-infrastructure-and-deployment/pz05_break_the_model.md) |
+| ПЗ5 | 13–14 | M4 | Кейс «Сломай модель» | [pz05](../M4-infrastructure-and-deployment/pz05_break_the_model.md) |
 
-> Тема drift — в **ЛР8** и кейсе **ПЗ5**.
+> Тема drift — в **ЛР8**, **ЛР10** и кейсе **ПЗ5** (2 нед., параллельно ЛР10).
 
 ---
 

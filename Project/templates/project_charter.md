@@ -58,7 +58,7 @@
 | **Периодичность** | |
 | **NDA** | да / нет |
 | **Можно ли публиковать в open repo** | да / нет / только агрегаты |
-| **Ответственный (Data)** | ФИО |
+| **Ответственный (Data Analyst)** | ФИО |
 
 ### Ограничения и риски данных
 
@@ -74,7 +74,7 @@
 - [ ] ЛР1–2: EDA и предобработка (`data/processed/`)
 - [ ] ЛР3–6: baseline + статистика + регрессия + ML
 - [ ] ЛР7–8: нейросеть + validation + `models/best_model/` + drift rules
-- [ ] ЛР9–10: REST API, Docker, CI, мониторинг
+- [ ] ЛР9–10: REST API, `docker-compose.yml` (FastAPI + MLflow), мониторинг
 - [ ] COP: submission + отчёт
 - [ ] PRC: live demo + peer-review
 
@@ -93,46 +93,46 @@
 
 | Участник | Основная роль | Вспомогательная (опц.) | GitHub / email |
 |----------|---------------|------------------------|----------------|
-| | Lead | | |
-| | Data | | |
-| | ML | | |
+| | Data Analyst | | |
+| | ML Engineer | | |
+| | ML Researcher | | |
 | | MLOps | | |
 
-*При 3 участниках одна роль совмещается — укажите в столбце «Вспомогательная».*
+*При 3 участниках роль **ML Researcher** совмещается с ML Engineer или Data Analyst.*
 
-**Вариант совмещения (3 чел.):** Lead / Data+___ / ML+___ / MLOps+___ *(зачеркнуть лишнее)*
+**Координатор команды** (устав, встречи, финальная презентация): ФИО ___
 
 ### 5.2. Зоны ответственности
 
 | Роль | Зона | Ключевые артефакты |
 |------|------|-------------------|
-| **Lead** | Постановка, сроки, партнёр, презентации, сборка отчёта | `docs/project_charter.md`, `docs/meetings/`, слайды PRC |
-| **Data** | Данные, EDA, preprocessing | `data/`, `notebooks/01_*`, `src/preprocessing.py` |
-| **ML** | Модели, метрики, validation, COP | `src/*_models.py`, `docs/validation.md`, `models/` |
-| **MLOps** | API, Docker, CI/CD, мониторинг | `app/`, `Dockerfile`, `.github/workflows/`, `docs/monitoring.md` |
+| **Data Analyst** | M1: данные, EDA, preprocessing | `data/`, `notebooks/01_*`, `src/preprocessing.py` |
+| **ML Engineer** | Код моделей, пайплайны, инференс | `src/*_models.py`, `models/` |
+| **ML Researcher** | Валидация, эксперименты, Optuna, drift | `docs/validation.md`, `src/drift_analysis.py`, COP |
+| **MLOps** | API, Docker, CI/CD, MLflow, мониторинг | `docker-compose.yml`, `app/`, `monitoring/` |
 
 ### 5.3. RACI по milestones (заполнить ФИО или роль)
 
 **R** — исполнитель · **A** — ответственный за сдачу · **C** — консультант · **I** — в курсе
 
-| Milestone | A | R | C | I |
-|-----------|---|---|---|---|
-| ЛР1 EDA | Lead | Data | ML | MLOps |
-| ЛР2 Preprocessing | Lead | Data | ML | MLOps |
-| ЛР3 Statistical | Lead | ML | Data | MLOps |
-| ЛР4 Stat diagnostics | Lead | ML | Data | MLOps |
-| ЛР5 Regression | Lead | ML | Data | MLOps |
-| ЛР6 ML | Lead | ML | Data | MLOps |
-| ЛР7 Neural | Lead | ML | Data | MLOps |
-| ЛР8 Validation / drift | Lead | ML, MLOps | Data | — |
-| ЛР9 Deploy | Lead | MLOps | ML | Data |
-| ЛР10 Monitoring | Lead | MLOps, ML | Data | — |
-| COP | Lead | ML | Data | MLOps |
-| PRC | Lead | все | — | — |
+| Milestone | R | C | I |
+|-----------|---|---|---|
+| ЛР1 EDA | Data Analyst | ML Engineer | MLOps |
+| ЛР2 Preprocessing | Data Analyst | ML Engineer | MLOps |
+| ЛР3 Statistical | ML Engineer | ML Researcher | MLOps |
+| ЛР4 Stat diagnostics | ML Researcher | ML Engineer | MLOps |
+| ЛР5 Regression | ML Engineer | Data Analyst | MLOps |
+| ЛР6 ML | ML Engineer | ML Researcher | MLOps |
+| ЛР7 Neural | ML Engineer | ML Researcher | MLOps |
+| ЛР8 Validation / drift | ML Researcher, MLOps | Data Analyst | — |
+| ЛР9 Deploy | MLOps | ML Engineer | Data Analyst |
+| ЛР10 Monitoring | MLOps, ML Researcher | ML Engineer | — |
+| COP | ML Researcher | ML Engineer | MLOps |
+| PRC | MLOps (demo) | все | — |
 
 ### 5.4. Правила совместной работы
 
-- [ ] Stand-up: ___ (день/время), фасилитация — **Lead**
+- [ ] Stand-up: ___ (день/время), фасилитация — **координатор**
 - [ ] PR: минимум 1 review от другой роли
 - [ ] Ветки: `feature/<role>-<task>` или по договорённости
 - [ ] Commit messages: `[LR01]`, `[LR02]`, … для трассировки milestone
@@ -143,19 +143,19 @@
 
 | Неделя | Milestone | Ответственный (R) | Deliverable | Срок (план) |
 |--------|-----------|-------------------|-------------|-------------|
-| 1–2 | M0: Устав | Lead | Этот документ | |
-| 2–3 | **ЛР1** EDA | Data | `notebooks/01_eda.ipynb`, `docs/report/01_eda.md` | |
-| 3–4 | **ЛР2** Preprocessing | Data | `data/processed/`, `src/preprocessing.py` | |
-| 5–6 | **ЛР3** Statistical | ML | `src/stat_models.py`, `models/sarima/` | |
-| 6–7 | **ЛР4** Stat diagnostics | ML | `src/stat_models_param.py` | |
-| 7–8 | **ЛР5** Regression | ML | `src/r_models.py`, `data/features/` | |
-| 8–9 | **ЛР6** ML | ML | `src/ml_models.py` | |
-| 9–10 | **ЛР7** Neural | ML | `src/neural_models.py`, `models/lstm/` | |
-| 10–11 | **ЛР8** Validation / drift | ML + MLOps | `docs/validation.md`, `models/best_model/` | |
-| 10–11 | **COP** Forecast Cup | ML | submission + отчёт | |
-| 12–13 | **ЛР9** Deploy | MLOps | `Dockerfile`, CI, MLflow | |
-| 13–14 | **ЛР10** Monitoring | MLOps + ML | `src/mon.py`, `docs/monitoring.md` | |
-| 15–16 | **PRC** + peer-review | Lead + все | Презентация, demo, отчёт | |
+| 1–2 | M0: Устав | Координатор | Этот документ | |
+| 2–3 | **ЛР1** EDA | Data Analyst | `notebooks/01_eda.ipynb`, `docs/report/01_eda.md` | |
+| 3–4 | **ЛР2** Preprocessing | Data Analyst | `data/processed/`, `src/preprocessing.py` | |
+| 5–6 | **ЛР3** Statistical | ML Engineer | `src/stat_models.py`, `models/sarima/` | |
+| 6–7 | **ЛР4** Stat diagnostics | ML Researcher | `src/stat_models_param.py` | |
+| 7–8 | **ЛР5** Regression | ML Engineer | `src/r_models.py`, `data/features/` | |
+| 8–9 | **ЛР6** ML | ML Engineer | `src/ml_models.py` | |
+| 9–10 | **ЛР7** Neural | ML Engineer | `src/neural_models.py`, `models/lstm/` | |
+| 10–11 | **ЛР8** Validation / drift | ML Researcher + MLOps | `docs/validation.md`, `models/best_model/` | |
+| 10–11 | **COP** Forecast Cup | ML Researcher | submission + отчёт | |
+| 12–13 | **ЛР9** Deploy | MLOps | `docker-compose.yml`, CI, MLflow | |
+| 13–14 | **ЛР10** Monitoring | MLOps + ML Researcher | `monitoring/`, `docs/monitoring.md` | |
+| 15–16 | **PRC** + peer-review | Координатор + все | Презентация, demo, отчёт | |
 
 *Даты уточняются преподавателем. ПЗ1–5 — индивидуально, параллельно milestones.*
 
@@ -165,10 +165,10 @@
 
 | Формат | Частота | Участники | Ответственный |
 |--------|---------|-----------|---------------|
-| Stand-up команды | еженедельно | команда | Lead |
-| Sync с партнёром | раз в 2 недели | Lead + партнёр (+ Data/ML по теме) | Lead |
-| Review с преподавателем | по milestone ЛР | команда | Lead |
-| Протокол встречи | после sync | — | Lead → `docs/meetings/` |
+| Stand-up команды | еженедельно | команда | Координатор |
+| Sync с партнёром | раз в 2 недели | Координатор + партнёр | Координатор |
+| Review с преподавателем | по milestone ЛР | команда | Координатор |
+| Протокол встречи | после sync | — | Координатор → `docs/meetings/` |
 
 **Канал связи:** (Telegram / email / …)
 
@@ -178,10 +178,11 @@
 
 | Роль | ФИО | Дата |
 |------|-----|------|
-| Team Lead | | |
-| Data | | |
-| ML | | |
+| Data Analyst | | |
+| ML Engineer | | |
+| ML Researcher | | |
 | MLOps | | |
+| Координатор (если не совмещён) | | |
 | Преподаватель | | |
 | Партнёр (опционально) | | |
 

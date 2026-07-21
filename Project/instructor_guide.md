@@ -50,14 +50,14 @@
 ### Принципы
 
 - **3–4 человека** — не допускать «одиночек» и групп > 5 без обоснования.
-- Роли фиксируются в [уставе](templates/project_charter.md): **Lead · Data · ML · MLOps**.
+- Роли фиксируются в [уставе](templates/project_charter.md): **Data Analyst · ML Engineer · ML Researcher · MLOps** (+ координатор по договорённости).
 - Баланс навыков: Python, ML, DevOps (хотя бы один с интересом к деплою).
 - Один кейс / один ряд — одна команда.
 
 ### Матрица распределения (пример)
 
-| Команда | Кейс | Lead | Data | ML | MLOps |
-|---------|------|------|------|-----|-------|
+| Команда | Кейс | Data Analyst | ML Engineer | ML Researcher | MLOps |
+|---------|------|--------------|-------------|---------------|-------|
 | Alpha | Прогноз спроса | A | B | C | D |
 | Beta | Нагрузка | … | … | … | … |
 
@@ -71,7 +71,7 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 |--------|-----------|-------------|------------------------|
 | 1–2 | M0: устав | — | Анонс; проверка [уставов](templates/project_charter.md), RACI |
 | 3 | Kick-off | — | Intro с партнёрами |
-| 2–3 | **ЛР1** EDA | 4 % | Приём 10–15 мин/команда; докладчик **Data** |
+| 2–3 | **ЛР1** EDA | 4 % | Приём 10–15 мин/команда; докладчик **Data Analyst** |
 | 3–4 | **ЛР2** Preprocessing | 4 % | Приём; **ПЗ3** (индив.) |
 | 5–6 | **ЛР3** Statistical | 4 % | Baseline + SARIMA/ES |
 | 6–7 | **ЛР4** Stat diagnostics | 4 % | Подбор, остатки; **ПЗ4** |
@@ -101,21 +101,21 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 
 ### Ожидания от партнёра
 
-- Kick-off 1 встреча (30–60 мин); контакт **Lead**.
+- Kick-off 1 встреча (30–60 мин); контакт **координатора** команды.
 - Ответ по данным ≤ 5 раб. дней.
 - Участие в финальной защите или письменный feedback.
 - Не требовать production SLA от учебного MVP.
 
 ### Ожидания от команды
 
-- Конфиденциальность данных (**Data** отвечает за `.gitignore`).
+- Конфиденциальность данных (**Data Analyst** отвечает за `.gitignore`).
 - Итеративные демо после milestones (не «big bang» на PRC).
 - MVP — прототип с roadmap post-MVP.
 
 ### Если партнёр «пропал»
 
 1. Резервный кейс: **ENTSO-E** + proxy-постановка в уставе.
-2. При оценке **PRC** снизить критерий **A** («работа с партнёром») в [rubrics.md](rubrics.md); технические ЛР1–10 и MVP — без снижения весов.
+2. При оценке **PRC** снизить балл за **презентацию (D)** или **документацию (E)**, если партнёр не участвовал; технические ЛР1–10 и MVP — без снижения весов.
 3. На защите преподаватель выступает как «заказчик».
 
 ---
@@ -129,7 +129,7 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 | Milestones **ЛР1–10** | **40 %** (10 × 4 %) | Файлы ЛР + отчёт команды; rubrics §3 в [rubrics.md](rubrics.md) |
 | **ПЗ1–5** | **10 %** (5 × 2 %) | LMS; ключи `*_key.md` |
 | **COP** | **15 %** | 50 % leaderboard + 50 % отчёт |
-| **PRC** | **29 %** | [rubrics.md](rubrics.md) §1 (критерии A–F) |
+| **PRC** | **29 %** | [rubrics.md](rubrics.md) §1 (критерии A–E) |
 | **Peer-review** | **6 %** | [peer_review.md](peer_review.md); \(k_{peer}\) 0,7–1,3 к PRC |
 
 Подробно: [docs/grading.md](../docs/grading.md).
@@ -148,14 +148,14 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 
 ### 6.3. PRC (29 %) и peer-review
 
-1. Выставите **командную** оценку PRC по rubrics §1 (сумма весов критериев A–F = 100 %).
+1. Выставите **командную** оценку PRC по rubrics §1 (критерии A–E, сумма = 100 %).
 2. Переведите в 29 % дисциплины: `29 % × (балл / 100)`.
 3. После peer-review умножьте на **\(k_{peer}\)** (0,7–1,3) — см. формулы в [peer_review.md](peer_review.md).
 4. Отдельно начислите **6 %** peer-review каждому студенту.
 
 ### 6.4. Индивидуальный вклад
 
-- На **PRC** каждый участник ≥ 2 мин по своей роли (Lead / Data / ML / MLOps).
+- На **PRC** каждый участник ≥ 2 мин по своей роли (Data Analyst / ML Engineer / ML Researcher / MLOps).
 - **Free-rider:** мало commits, не отвечает по зоне → снижение \(k_{peer}\), не автоматическое «−1 уровень» всей команде.
 - **ПЗ1–5** — строго индивидуальны; не смешивать с оценкой milestone.
 
@@ -206,14 +206,14 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 | MVP не собирается в Docker (ЛР9) | Extension только при working local API; MLOps + office hours |
 | Конфликт / free-rider | RACI в charter, git log, peer-review |
 | Партнёр дал не time series | Агрегация по времени или смена кейса |
-| «Lead делает всё» | Напомнить RACI; оценка по ролям на milestones |
+| «Координатор делает всё» | Напомнить RACI; оценка по ролям на milestones |
 | LLM без понимания | Опрос на защите; см. [project_guidelines §10](project_guidelines.md) |
 
 ---
 
 ## 9. Связь с КРМ
 
-| Competence | Milestones / КИМ |
+| Компетенции | Milestones / КИМ |
 |------------|------------------|
 | BD-1.2, BD-1.3 | ЛР1–2, ПЗ2–3 |
 | ML-2.2, ML-2.3 | ЛР3–8, ПЗ4, COP, PRC |

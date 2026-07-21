@@ -21,7 +21,7 @@
 
 ## 2. Роли в команде
 
-Выберите роль в [уставе](../../Project/templates/project_charter.md): **Lead**, **Data**, **ML**, **MLOps**.  
+Выберите роль в [уставе](../../Project/templates/project_charter.md): **Data Analyst**, **ML Engineer**, **ML Researcher**, **MLOps** (координатор команды — по договорённости).  
 Матрица задач по milestones: [project_guidelines.md §3](../../Project/project_guidelines.md#3-формирование-команды-и-роли).
 
 **Минимум от каждого:**

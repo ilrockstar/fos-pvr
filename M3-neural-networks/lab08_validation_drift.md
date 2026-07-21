@@ -2,7 +2,7 @@
 
 **Модуль 3.** Нейросетевые модели и оценка устойчивости  
 **Ролевой фокус:** ML Engineer, MLOps  
-**Комpetence:** ML-2.2, ML-3.2, ML-5.1, ML-5.2 (С–П)  
+**Компетенции:** ML-2.2, ML-3.2, ML-5.1, ML-5.2 (С–П)  
 **Время:** 2 ч лекция + 2 ч лабораторная (+ 4 ч самостоятельной работы)
 
 > **Milestone команды (3–4 чел.):** `docs/validation.md`, `models/best_model/`, `src/drift_analysis.py`. Вес: **4 %** — [docs/grading.md](../docs/grading.md).

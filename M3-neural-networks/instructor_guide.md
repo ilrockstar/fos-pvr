@@ -1,12 +1,14 @@
 # Методические рекомендации: модуль 3
 
+**Формат ФОС:** [ЛР7–8](README.md) — milestones группового проекта; **COP** — параллельно.
+
 ## Расписание
 
 | Неделя | ЛР | Фокус |
 |--------|-----|-------|
-| 9–10 | ЛР5 | Sequence pipeline → LSTM/GRU → сравнение с baseline |
-| 11–12 | ЛР6 | Walk-forward → HPO → финальная модель |
-| 9–11 | [Forecast Cup](competition.md) | Параллельно ЛР5–6: сабмиты, leaderboard |
+| 9–10 | [ЛР7](lab07_neural_networks.md) | Sequence pipeline → LSTM/GRU → сравнение с baseline |
+| 10–11 | [ЛР8](lab08_validation_drift.md) | Walk-forward → HPO (Optuna) → `best_model` → drift rules |
+| 9–11 | [Forecast Cup](competition.md) | Параллельно ЛР7–8: сабмиты, leaderboard |
 
 ## Forecast Cup (COP)
 
@@ -14,7 +16,7 @@
 - Организация: [competition/instructor_guide.md](competition/instructor_guide.md)
 - Подготовить `train.csv`, `sample_submission.csv`, скрытый `solution.csv`
 - Kick-off на неделе 9; deadline — за 1 нед. до защиты топ-5
-- Вес COP ≈ 3,75 %+ по учебному плану (часть СОР)
+- Вес COP — **15 %** дисциплины ([grading.md](../docs/grading.md))
 
 ## Требования к вычислительным ресурсам
 
@@ -23,13 +25,13 @@
 
 ## Связь с модулем 2
 
-Студент должен принести таблицу метрик SARIMA и ML. Без неё сравнение в ЛР5–6 неполное.
+Студент должен принести таблицу метрик SARIMA (ЛР3–4) и ML (ЛР6). Без неё сравнение в ЛР7–8 неполное.
 
 ## Проверка на защите
 
-**ЛР5:** «Почему scaler fit только на train? Как выбран lookback?»
+**ЛР7:** «Почему scaler fit только на train? Как выбран lookback?»
 
-**ЛР6:** «Чем walk-forward отличается от обычного split? Сколько раз вы «подглядели» в test?»
+**ЛР8:** «Чем walk-forward отличается от обычного split? Сколько раз вы «подглядели» в test? Какие артефакты передаёте в ЛР9?»
 
 ## Типичные ошибки
 
@@ -48,4 +50,4 @@
 | Средний | 80 |
 | Продвинутый | 100 |
 
-Рекомендуемый вес: ЛР5 — 3,75% (СОР), ЛР6 — часть защиты ЛР7 по учебному плану.
+Каждая ЛР7 и ЛР8 — **4 %** дисциплины. COP оценивается отдельно по [competition/scoring.md](competition/scoring.md). См. [grading.md](../docs/grading.md).
