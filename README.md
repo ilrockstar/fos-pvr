@@ -69,6 +69,8 @@
 
 Практические задания ПЗ1–ПЗ5: [docs/practical_assignments.md](docs/practical_assignments.md).
 
+Вопросы к защите milestones (оценка **самостоятельности** выполнения работ, **устойчивость к ИИ**): [docs/lab_defense_questions.md](docs/lab_defense_questions.md).
+
 | ЛР / КИМ | Модуль | Компетенции | Форма оценивания | Материал |
 |----------|--------|-------------|------------------|----------|
 | ЛР1 | M1 | BD 1.2, ML-2.3 | Milestone, 4 % | [lab01](M1-analysis-and-preparation/lab01_eda.md) |
