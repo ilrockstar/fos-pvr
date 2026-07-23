@@ -13,8 +13,7 @@
 | **Лабораторные работы** (10 milestones) | **40 %** | [M1](../M1-analysis-and-preparation/) … [M4](../M4-infrastructure-and-deployment/) | По **4 %** за каждую ЛР; сдаёт **команда** |
 | **Практические задания / квизы** (ПЗ1–ПЗ5) | **10 %** | [ПЗ1–ПЗ5](#2-практические-задания-пз1пз5) | По **2 %** каждое |
 | **Соревнование (COP)** | **15 %** | [Forecast Cup](../M3-neural-networks/competition.md) | 50 % качество + 50 % отчёт |
-| **Командный проект (PRC)** — финальная защита MVP | **29 %** | [Project](../Project/) | См. [rubrics.md](../Project/rubrics.md) |
-| **Peer-review** | **6 %** | [peer_review.md](../Project/peer_review.md) | Коэффициент 0,7–1,3 к части PRC |
+| **Командный проект (PRC + peer-review)** — финальная защита MVP | **35 %** | [Project](../Project/) | Командная оценка по [rubrics.md](../Project/rubrics.md) × \(k_{peer}\) (0,7–1,3); см. [peer_review.md](../Project/peer_review.md) |
 | **ИТОГО** | **100 %** | | |
 
 > **Промежуточная аттестация — дифференцированный зачёт.** Итоговая оценка складывается из компонентов таблицы выше; отдельный экзамен не проводится. Минимальные пороги — [§6](#6-минимальные-пороги-зачёта).
@@ -70,9 +69,13 @@ $$\text{Балл}_{ЛР_i} = 4\% \times \frac{\text{Уровень \%}}{100}$$
 
 ---
 
-## 5. PRC (29 %) и peer-review (6 %)
+## 5. PRC (35 %) и peer-review
 
-См. [Project/rubrics.md](../Project/rubrics.md), [peer_review.md](../Project/peer_review.md).
+Блок **35 %** объединяет финальную защиту MVP и учёт индивидуального вклада. Отдельного веса peer-review нет — только коэффициент \(k_{peer}\) ∈ [0,7; 1,3].
+
+$$\text{Балл}_{PRC\_студента} = 35\% \times \frac{B_{комиссии}}{100} \times k_{peer}$$
+
+где \(B_{комиссии}\) — командная оценка по [rubrics.md](../Project/rubrics.md) §1 (критерии A–E, сумма = 100 %). Процедура peer-review: [peer_review.md](../Project/peer_review.md).
 
 ---
 

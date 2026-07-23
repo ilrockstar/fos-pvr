@@ -34,7 +34,7 @@ PRC = защита целостного MVP + peer-review
 
 Команда проходит полный цикл на **едином временном ряде** (рекомендуется: суточная нагрузка ENTSO-E или кейс индустриального партнёра по согласованию) и к финалу сдаёт **MVP**: REST API + Docker + MLflow + мониторинг drift + документация.
 
-**Вес PRC:** 29 % (+ peer-review 6 %). См. [docs/grading.md](../docs/grading.md).
+**Вес PRC:** 35 % (защита MVP × \(k_{peer}\) из peer-review). См. [docs/grading.md](../docs/grading.md).
 
 ### Профессиональные роли в команде
 
@@ -83,9 +83,9 @@ PRC = защита целостного MVP + peer-review
 
 ## 5. Оценивание и защита
 
-Проект формирует **29 %** итоговой оценки напрямую и **40 %** опосредованно — через защиту milestones ЛР1–10.
+Проект формирует **35 %** итоговой оценки (PRC + peer-review) и **40 %** опосредованно — через защиту milestones ЛР1–10.
 
-$$\text{Балл}_{PRC\_итог} = \text{Балл}_{комиссии} \times k_{peer}$$
+$$\text{Балл}_{PRC\_студента} = 35\% \times \frac{B_{комиссии}}{100} \times k_{peer}$$
 
 **Распределение баллов комиссии (100 % за PRC):**
 
@@ -113,7 +113,7 @@ $$\text{Балл}_{PRC\_итог} = \text{Балл}_{комиссии} \times k_
 | Файл | Описание |
 |------|----------|
 | [project_guidelines.md](project_guidelines.md) | Этапы, роли, артефакты, MVP |
-| [peer_review.md](peer_review.md) | Взаимооценка (6 %) |
+| [peer_review.md](peer_review.md) | Взаимооценка (\(k_{peer}\) к блоку 35 %) |
 | [instructor_guide.md](instructor_guide.md) | Организация для преподавателя |
 | [rubrics.md](rubrics.md) | Критерии защиты PRC |
 | [templates/](templates/) | Устав, milestone, презентация |

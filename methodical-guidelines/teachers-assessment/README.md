@@ -12,8 +12,7 @@
 | ЛР1–10 (milestones) | 40 % (×4 %) | [docs/grading.md](../../docs/grading.md) |
 | ПЗ1–5 | 10 % | [practical_assignments.md](../../docs/practical_assignments.md) + ключи `*_key.md` |
 | COP | 15 % | [M3/competition/](../../M3-neural-networks/competition/) |
-| PRC | 29 % | [Project/rubrics.md](../../Project/rubrics.md) |
-| Peer-review | 6 % + \(k_{peer}\) | [peer_review.md](../../Project/peer_review.md) |
+| PRC + peer-review | 35 % (\(k_{peer}\) 0,7–1,3) | [Project/rubrics.md](../../Project/rubrics.md), [peer_review.md](../../Project/peer_review.md) |
 
 Шкала уровней КИМ: **Базовый 60 % · Средний 80 % · Продвинутый 100 %**.
 
@@ -34,7 +33,7 @@
 
 Используйте [Project/rubrics.md](../../Project/rubrics.md) (критерии A–F, сумма весов 100 %).
 
-После командной оценки примените **\(k_{peer}\)** из peer-review (0,7–1,3) к части PRC.
+После командной оценки переведите в 35 %: `35 % × (балл / 100)`, затем примените **\(k_{peer}\)** из peer-review (0,7–1,3).
 
 Красные флаги: free-rider, NDA, demo не запускается — см. [instructor_guide.md](../../Project/instructor_guide.md).
 

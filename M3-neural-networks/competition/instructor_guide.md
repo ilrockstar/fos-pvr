@@ -5,7 +5,7 @@
 ### Разрез train / test
 
 1. Взять `load_daily_clean.csv` (или ENTSO-E daily load ≥ 4 лет).
-2. Выбрать `TRAIN_END` — например, `2024-01-31`.
+2. Выбрать `TRAIN_END` — например, `2026-01-31`.
 3. Test period: **60 суток** после `TRAIN_END`.
 4. Выгрузить:
    - `train.csv` — только `date <= TRAIN_END`
@@ -16,7 +16,7 @@
 
 ```markdown
 # Forecast Cup — данные
-TRAIN_END: 2024-01-31
+TRAIN_END: 2026-01-31
 TEST_DAYS: 60
 Target: load_mwh (daily MWh)
 Forbidden: full dataset with test labels

@@ -17,7 +17,7 @@
 | Модель измерения для всех модулей и форм аттестации | ✅ | [measurement_model.md](measurement_model.md), [grading.md](grading.md) |
 | Каждый результат обучения → ≥1 КИМ | ✅ | README §1 + матрица measurement_model |
 | КИМ: условия, формат, критерии, шкала | ✅ | ЛР1–10, ПЗ1–5, COP, PRC — в файлах модулей и Project/ |
-| Баллы рубрик согласованы с итоговой таблицей | ✅ | 40+10+15+29+6=100; PRC rubrics §1 = 100 %; ЛР × 4 % |
+| Баллы рубрик согласованы с итоговой таблицей | ✅ | 40+10+15+35=100; PRC rubrics §1 = 100 %; ЛР × 4 % |
 | Правила LLM и внешних ресурсов | ✅ | [students/README.md](../methodical-guidelines/students/README.md), [project_guidelines.md](../Project/project_guidelines.md) §10 |
 | Методические указания | ✅ | [methodical-guidelines/](../methodical-guidelines/) — заполнены |
 | Ресурсы с аннотациями и ссылками | ✅ | [resources/README.md](../resources/README.md) |
@@ -58,7 +58,7 @@
 | ПЗ1 | quiz_pz1_ml_basics.md | 10 мин LMS | quiz_pz1_key.md | 2 % |
 | ПЗ2 | quiz_pz01_structure.md | 10 мин LMS | quiz_pz01_key.md | 2 % |
 | COP | competition.md | submission + отчёт | scoring.md | 15 % |
-| PRC | rubrics.md | demo + PDF | §1 A–F | 29 % |
+| PRC | rubrics.md | demo + PDF | §1 A–F | 35 % |
 
 ---
 

@@ -82,7 +82,7 @@ $$\text{Балл}_{PRC\_итог} = \text{Балл}_{комиссии} \times k_
 | **ЛР9** Deploy | MLOps | API + Docker + MLflow | + `docker-compose`, CI | + demo без правок |
 | **ЛР10** Monitoring | MLOps + ML Researcher | drift-report + playbook | + Evidently, simulate_drift | + auto-retrain в пайплайне |
 
-**PRC (29 %)** — сводная rubric §1 (критерии A–E). **Не дублирует** сумму ЛР; оценивает **целостность MVP** на защите.
+**PRC (35 %)** — сводная rubric §1 (критерии A–E). **Не дублирует** сумму ЛР; оценивает **целостность MVP** на защите. Индивидуальная дифференциация — через \(k_{peer}\) из [peer_review.md](peer_review.md).
 
 ---
 

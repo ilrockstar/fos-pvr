@@ -65,7 +65,7 @@
 
 Полная матрица компетенций × КИМ: [docs/measurement_model.md](docs/measurement_model.md).
 
-Система оценивания (40 / 10 / 15 / 29 / 6 %): [docs/grading.md](docs/grading.md).
+Система оценивания (40 / 10 / 15 / 35 %): [docs/grading.md](docs/grading.md).
 
 Практические задания ПЗ1–ПЗ5: [docs/practical_assignments.md](docs/practical_assignments.md).
 
@@ -87,7 +87,7 @@
 | ПЗ4 | M2 | ML-2.2 | Квиз, 2 % | [quiz_pz03](M2-statistical-and-ML-models/quiz_pz03_metrics.md) |
 | ПЗ5 | M4 | ML-5.2, LC-5.1, LC-5.2 | Кейс, 2 % | [pz05](M4-infrastructure-and-deployment/pz05_break_the_model.md) |
 | COP | M3 | ML-3.1, ML-3.2 | Соревнование, 15 % | [competition](M3-neural-networks/competition.md) |
-| PRC | — | все | Защита MVP, 29 % + [peer-review](Project/peer_review.md) 6 % | [Project](Project/README.md) |
+| PRC | — | все | Защита MVP + [peer-review](Project/peer_review.md), 35 % | [Project](Project/README.md) |
 
 ### Этапы формирования компетенций
 
@@ -165,7 +165,7 @@
 | Milestones ЛР1–10 (команда) | 40 % |
 | ПЗ1–ПЗ5 (индивидуально) | 10 % |
 | Forecast Cup (COP) | 15 % |
-| PRC + peer-review | 29 % + 6 % |
+| PRC + peer-review | 35 % |
 
 Подробно: [docs/grading.md](docs/grading.md).
 
