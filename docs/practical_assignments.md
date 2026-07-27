@@ -13,9 +13,9 @@
 |----|--------|----------|--------|-------|------------|----------|
 | [ПЗ1](../M1-analysis-and-preparation/quiz_pz1_ml_basics.md) | 1 | Квиз «Остаточные знания по ML» | M1 | 10 мин | ML-3.1, BD 1.2 | все |
 | [ПЗ2](../M1-analysis-and-preparation/quiz_pz01_structure.md) | 2 | Квиз «Структура ряда» | M1 | 10 мин | BD 1.2 | Data Analyst |
-| [ПЗ3](../M1-analysis-and-preparation/quiz_pz02_stationarity.md) | 4 | Квиз «Стационарность» | M1 | 15 мин | BD 1.3 | Data Analyst |
-| [ПЗ4](../M2-statistical-and-ML-models/quiz_pz03_metrics.md) | 7 | Квиз «Метрики качества» | M2 | 15 мин | ML-2.2 | ML Engineer / Researcher |
-| [ПЗ5](../M4-infrastructure-and-deployment/pz05_break_the_model.md) | 13–14 | Кейс «Сломай модель» | M4 | 2 нед. | ML-5.2, LC-5.1, LC-5.2 | ML Researcher / MLOps |
+| [ПЗ3](../M1-analysis-and-preparation/quiz_pz02_stationarity.md) | 4 | Квиз «Стационарность» | M1 | 15 мин | BD 1.3, ML-2.2 | Data Analyst |
+| [ПЗ4](../M2-statistical-and-ML-models/quiz_pz03_metrics.md) | 7 | Квиз «Метрики качества» | M2 | 15 мин | LC-5.1, ML-2.3 | ML Engineer / Researcher |
+| [ПЗ5](../M4-infrastructure-and-deployment/pz05_break_the_model.md) | 13–14 | Кейс «Сломай модель» | M4 | 2 нед. | LC-5.1, LC-5.2 | ML Researcher / MLOps |
 
 ### Содержание по презентации
 

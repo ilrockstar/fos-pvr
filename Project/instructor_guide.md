@@ -360,11 +360,13 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 
 | Компетенции | Milestones / КИМ |
 |------------|------------------|
-| BD-1.2, BD-1.3 | ЛР1–2, ПЗ2–3 |
-| ML-2.2, ML-2.3 | ЛР3–8, ПЗ4, COP, PRC |
-| ML-3.1, ML-3.2 | ЛР3–8, COP |
-| ML-5.1, ML-5.2 | ЛР8, ЛР10, ПЗ5, PRC |
-| LC-5.1, LC-5.2 | ЛР9–10, PRC |
+| BD-1.2, BD-1.3 | ЛР1–2, ПЗ1–3 |
+| ML-2.2 | ЛР2, ЛР4, ЛР8, ПЗ3, PRC |
+| ML-2.3 | ЛР2, ЛР4, ЛР6, PRC, peer-review |
+| ML-3.1, ML-3.2 | ЛР1, ЛР3–8, ПЗ1, COP |
+| ML-5.1, ML-5.2 | ЛР8, COP, PRC |
+| LC-5.1 | ЛР9–10, ПЗ4, ПЗ5, PRC, peer-review |
+| LC-5.2 | ЛР9–10, ПЗ5, PRC |
 
 Полная матрица: [measurement_model.md](../docs/measurement_model.md).
 
