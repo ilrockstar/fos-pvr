@@ -33,6 +33,7 @@
 - [ ] Настроена сдача: LMS / GitHub Classroom + формы **ПЗ1–5** ([practical_assignments.md](../docs/practical_assignments.md))
 - [ ] Подготовлена форма **peer-review** ([peer_review.md](peer_review.md))
 - [ ] Студентам ознакомлены с [вопросами к защите milestones](../docs/lab_defense_questions.md) (самостоятельность, устойчивость к ИИ)
+- [ ] Студентам и преподавателям доступны [мероприятия оценивания самостоятельности](../docs/integrity_measures.md) (слайд 12 презентации ФОС)
 
 ### Требования к кейсу партнёра
 
@@ -312,6 +313,19 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 3. Протокол валидации — где test, нет ли утечки?
 4. Прогноз через API (**live demo**).
 5. План при data/concept drift ([ЛР8](../M3-neural-networks/lab08_validation_drift.md), [ЛР10](../M4-infrastructure-and-deployment/lab10_monitoring.md))?
+
+### Мероприятие «Адресный блиц по ролям»
+
+На любом слайде преподаватель **прерывает докладчика** и задаёт вопрос **строго исполнителю роли** по артефакту в репозитории. Примеры:
+
+| Роль | Триггер на защите | Пример вопроса |
+|------|-------------------|----------------|
+| **MLOps** | Слайд про Docker / deploy | «Откройте `Dockerfile`: почему `python:3.10-slim`, а не `python:3.10`? За счёт чего уменьшен вес образа?» |
+| **ML Engineer** | Слайд про метрики / модели | «Покажите в ноутбуке walk-forward split — где граница train/test?» |
+| **Data Analyst** | Слайд про EDA | «Объясните этот график ACF — почему выбрали период сезонности 7?» |
+| **ML Researcher** | Слайд про drift / retrain | «Какой порог PSI срабатывает на retrain в вашем DAG?» |
+
+Отсутствие ответа по своей зоне → **0 баллов** за соответствующий блок рубрики PRC; при систематическом free-riding — \(k_{peer} = 0{,}7\). Подробнее: [integrity_measures.md](../docs/integrity_measures.md).
 
 ### Дополнительные вопросы по теме
 

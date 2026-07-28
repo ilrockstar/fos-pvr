@@ -42,7 +42,13 @@ Google Sheet или LMS assignment.
 1. Автоответ: «получено, проверка в течение 24 ч».
 2. Запустить `validate_submission()` из [scoring.md](scoring.md).
 3. При OK — `score_submission()` → запись в leaderboard.
-4. Public LB обновлять optional; **финал только private**.
+4. Public LB обновлять optional; **финал только private** (мероприятие «Скрытый тест преподавателя» — [integrity_measures.md](../../docs/integrity_measures.md)).
+
+### Антисписывание (COP)
+
+- Итоговый рейтинг и зачёт — по **private test-set** (`solution.csv` не выдаётся студентам).
+- Сабмит без воспроизводимого ноутбука (цепочка Baseline → ошибка → улучшение, neural-блок) — **аннулируется**, даже при 1-м месте на public LB.
+- Подробнее: [integrity_measures.md](../../docs/integrity_measures.md).
 
 ---
 

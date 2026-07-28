@@ -238,6 +238,8 @@ def make_sequences(values, lookback=14):
 | Воспроизводимость | 15 % | Seed, notebook, метрики сходятся ±1 % |
 | Beat naive baseline | 10 % | Порог зачёта |
 
+> **Антисписывание:** итог COP — по **private** test-set; сабмит без воспроизводимого ноутбука аннулируется. См. [integrity_measures.md](../docs/integrity_measures.md).
+
 ### Уровни (КРМ)
 
 | Уровень | Критерии |

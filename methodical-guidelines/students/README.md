@@ -67,7 +67,8 @@
 
 **Обязательно:** раздел «Использованные инструменты» в README команды, если LLM существенно участвовал в коде.
 
-Подробнее: [project_guidelines.md §10](../../Project/project_guidelines.md), [CONTRIBUTING.md](../../CONTRIBUTING.md).
+Подробнее: [project_guidelines.md §10](../../Project/project_guidelines.md), [CONTRIBUTING.md](../../CONTRIBUTING.md).  
+Как преподаватель проверяет понимание (модификация на лету, ловушки в квизах, private test, блиц по ролям): [integrity_measures.md](../../docs/integrity_measures.md).
 
 ---
 

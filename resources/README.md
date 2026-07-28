@@ -12,6 +12,7 @@
 | КРМ v3.0 (исходник) | Коды competence и индикаторов | [data/krm-v3.0.xlsx](../data/krm-v3.0.xlsx) |
 | Рабочая программа | Цели, задачи, объём | [docs/rpd.md](../docs/rpd.md), [docs/rpd.docx](../docs/rpd.docx) |
 | Модель измерения | Компетенции × КИМ | [docs/measurement_model.md](../docs/measurement_model.md) |
+| Оценивание самостоятельности | Мероприятия по слайду 12 презентации ФОС | [docs/integrity_measures.md](../docs/integrity_measures.md) |
 
 ---
 

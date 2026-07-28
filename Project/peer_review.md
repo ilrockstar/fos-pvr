@@ -89,7 +89,7 @@ $$k_{peer} = \text{clip}\left(\frac{\text{средняя оценка студе
 |----------|----------|
 | Все оценили одного на 100 / 0 | Проверка collusion |
 | 0 commits при оценке «80+» | Снижение $k_{peer}$ |
-| Жалоба на free-rider | Сверка с [milestone rubrics](rubrics.md) |
+| Жалоба на free-rider | Сверка с [milestone rubrics](rubrics.md); при подтверждении ≥ 2 peers — \(k_{peer} = 0{,}7\) ([integrity_measures.md](../docs/integrity_measures.md)) |
 
 ---
 
