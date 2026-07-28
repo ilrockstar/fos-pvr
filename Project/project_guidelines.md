@@ -48,14 +48,25 @@
 
 ### 2.1. Жизненный цикл (четыре вехи)
 
-| Веха | Недели | Содержание | Milestones |
-|------|--------|------------|------------|
-| **1. Исследование** | 1–4 | Сбор данных, EDA, STL, ADF/KPSS | ЛР1–2 |
-| **2. Классическое моделирование** | 5–8 | ARIMA, Prophet*, регрессия, RF/XGBoost | ЛР3–6 |
-| **3. Глубокое обучение** | 9–12 | LSTM/GRU, walk-forward, Optuna, drift | ЛР7–8, COP |
-| **4. Промышленный деплой** | 13–16 | FastAPI, Docker, Airflow/Prefect, Evidently | ЛР9–10, PRC |
+Полные регламенты, LLM-канон и рубрикаторы приёмки — в [attachments/](attachments/) ([p_v1.pdf](attachments/p_v1.pdf) … [p_v4.pdf](attachments/p_v4.pdf)).
+
+| Веха | Недели | Содержание | Milestones | PDF |
+|------|--------|------------|------------|-----|
+| **1. Исследование** | 1–4 | EDA, очистка, STL, ADF/KPSS | ЛР1–2 | [p_v1.pdf](attachments/p_v1.pdf) |
+| **2. Stat + ML** | 5–8 | ARIMA/SARIMA, FE, CatBoost/LightGBM, Optuna | ЛР3–6 | [p_v2.pdf](attachments/p_v2.pdf) |
+| **3. DL + устойчивость** | 9–12 | LSTM/GRU, многошаговый прогноз, drift-тест | ЛР7–8, COP | [p_v3.pdf](attachments/p_v3.pdf) |
+| **4. MLOps / деплой** | 13–16 | FastAPI, Docker, MLflow, retrain | ЛР9–10, PRC | [p_v4.pdf](attachments/p_v4.pdf) |
 
 \* Prophet — по согласованию с преподавателем, если уместен для кейса.
+
+#### Сквозная логика вех
+
+1. **Веха 1** — единый очищенный массив и доказанная стационарность (`preprocessing.py`, `data/processed/`).
+2. **Веха 2** — сравнимые stat- и ML-модели на одном hold-out; зафиксирован ML-baseline для нейросетей.
+3. **Веха 3** — нейросеть + полигон drift; участие в Forecast Cup.
+4. **Веха 4** — контейнеризованный сервис с мониторингом и сценарием автоматического переобучения.
+
+На защите каждой вехи преподаватель проверяет **Definition of Done** из соответствующего PDF (шкала 0–10) и связность с бизнес-постановкой кейса.
 
 ---
 
@@ -183,6 +194,8 @@
 ---
 
 ## 5. Этапы проекта и milestones ЛР1–10
+
+> **Ключевые вехи (PDF):** [Веха 1](attachments/p_v1.pdf) (ЛР1–2) · [Веха 2](attachments/p_v2.pdf) (ЛР3–6) · [Веха 3](attachments/p_v3.pdf) (ЛР7–8, COP) · [Веха 4](attachments/p_v4.pdf) (ЛР9–10, PRC) · [индекс](attachments/README.md).
 
 ### Этап 0. Инициация (недели 1–2)
 

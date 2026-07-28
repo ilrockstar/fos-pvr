@@ -74,6 +74,7 @@
 ## 6. Полезные ссылки
 
 - [Project/project_guidelines.md](../../Project/project_guidelines.md) — главный документ по проекту
+- [Project/attachments/](../../Project/attachments/) — методические PDF по **вехам 1–4** ([p_v1](../../Project/attachments/p_v1.pdf) … [p_v4](../../Project/attachments/p_v4.pdf))
 - [docs/practical_assignments.md](../../docs/practical_assignments.md) — график ПЗ
 - [resources/README.md](../../resources/README.md) — литература и данные
 - [M1–M4](../../README.md#3-контрольно-измерительные-материалы) — КИМ по модулям

@@ -55,12 +55,24 @@ PRC = защита целостного MVP + peer-review
 
 Лабораторные работы — **не изолированные задачи**, а **milestones (вехи)** сквозного проекта.
 
-| Веха | Недели | Содержание | Результат |
-|------|--------|------------|-----------|
-| **1. Исследование** | 1–4 | Сбор данных, EDA, STL, ADF/KPSS | Отчёты [ЛР1–2](../M1-analysis-and-preparation/) |
-| **2. Классическое моделирование** | 5–8 | ARIMA, Prophet*, регрессия, boosting (RF/XGBoost) | Код [ЛР3–6](../M2-statistical-and-ML-models/) |
-| **3. Глубокое обучение** | 9–12 | LSTM/GRU, walk-forward, Optuna, drift | [ЛР7–8](../M3-neural-networks/), COP |
-| **4. Промышленный деплой** | 13–16 | FastAPI, Docker, Airflow, Evidently | [ЛР9–10](../M4-infrastructure-and-deployment/), PRC |
+Подробные методические рекомендации по каждой продуктовой вехе — в [Project/attachments/](attachments/) ([p_v1.pdf](attachments/p_v1.pdf) … [p_v4.pdf](attachments/p_v4.pdf)).
+
+| Веха | Недели | Содержание | Milestones | Методич. PDF |
+|------|--------|------------|------------|--------------|
+| **1. Исследование** | 1–4 | EDA, очистка, STL, ADF/KPSS, `preprocessing.py` | [ЛР1–2](../M1-analysis-and-preparation/) | [p_v1.pdf](attachments/p_v1.pdf) |
+| **2. Stat + ML** | 5–8 | ARIMA/SARIMA, feature pipeline, CatBoost/LightGBM, Optuna | [ЛР3–6](../M2-statistical-and-ML-models/) | [p_v2.pdf](attachments/p_v2.pdf) |
+| **3. DL + устойчивость** | 9–12 | LSTM/GRU, многошаговый прогноз, drift-стресс-тест | [ЛР7–8](../M3-neural-networks/), COP | [p_v3.pdf](attachments/p_v3.pdf) |
+| **4. MLOps / деплой** | 13–16 | FastAPI, Docker, MLflow, мониторинг, auto-retrain | [ЛР9–10](../M4-infrastructure-and-deployment/), PRC | [p_v4.pdf](attachments/p_v4.pdf) |
+
+### Кратко по вехам
+
+**Веха 1 — разведочный анализ и верификация** ([p_v1.pdf](attachments/p_v1.pdf)): команда сдаёт воспроизводимый пайплайн очистки и первичного анализа — импорт и аудит сырого ряда, фильтрация выбросов и лакун без data leakage, STL-декомпозиция, ACF/PACF, тесты ADF/KPSS. Роли: Data Analyst (EDA и отчёт), ML Engineer (функции очистки), MLOps (venv, структура repo).
+
+**Веха 2 — статистика и классическое ML** ([p_v2.pdf](attachments/p_v2.pdf)): на базе `preprocessing.py` — идентификация ARIMA/SARIMA, аудит остатков, автоматизированный feature engineering (лаги, rolling, календарь, exog), TimeSeriesSplit, градиентный бoosting и Optuna; сводная таблица stat vs ML.
+
+**Веха 3 — нейросети и устойчивость** ([p_v3.pdf](attachments/p_v3.pdf)): тензоризация данных, обучение LSTM/GRU (или Conv1D), многошаговый прогноз, симуляция индустриального drift и сравнение с ML-baseline из вехи 2; параллельно — Forecast Cup.
+
+**Веха 4 — инфраструктура и prod** ([p_v4.pdf](attachments/p_v4.pdf)): сериализация лучшей модели, REST API (FastAPI + pydantic), Docker-образ, MLflow, скрипт-монитор drift и автоматический retrain-тригger; финальная защита MVP (PRC).
 
 \* Prophet — опционально, если обоснован в постановке задачи.
 
@@ -117,6 +129,7 @@ $$\text{Балл}_{PRC\_студента} = 35\% \times \frac{B_{комисси�
 | [instructor_guide.md](instructor_guide.md) | Организация для преподавателя |
 | [rubrics.md](rubrics.md) | Критерии защиты PRC |
 | [templates/](templates/) | Устав, milestone, презентация |
+| [attachments/](attachments/) | **Ключевые вехи** — методические PDF ([p_v1](attachments/p_v1.pdf)–[p_v4](attachments/p_v4.pdf)) |
 
 ---
 

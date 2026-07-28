@@ -100,14 +100,15 @@
 
 ### 2.2. Четыре продуктовые вехи (соответствие ЛР1–10)
 
-Какой бы кейс ни выбрала команда, данные проходят **четыре последовательные вехи**:
+Какой бы кейс ни выбрала команда, данные проходят **четыре последовательные вехи**.  
+**Методические рекомендации (PDF):** [p_v1.pdf](attachments/p_v1.pdf) · [p_v2.pdf](attachments/p_v2.pdf) · [p_v3.pdf](attachments/p_v3.pdf) · [p_v4.pdf](attachments/p_v4.pdf) · [индекс](attachments/README.md).
 
-| Веха | Milestones | Содержание | Результат этапа |
-|------|------------|------------|-----------------|
-| **1. Разведочный анализ и очистка** | ЛР1–2 | Сырой массив партнёра: очистка от сбоев и пропусков; графики ACF/PACF; сезонность (суточная, недельная, календарная); тесты стационарности (ADF/KPSS) | Очищенный массив, готовый к моделированию; `data/processed/` |
-| **2. Статистическое и ML-моделирование** | ЛР3–6 | SARIMA (подбор параметров, диагностика); регрессия с лагами и exog; **CatBoost / LightGBM / XGBoost** со скользящими окнами | Сравнительная таблица stat vs ML на едином test |
-| **3. Глубокое обучение и устойчивость** | ЛР7–8, COP | **LSTM/GRU** (PyTorch) для многошагового прогноза; HPO (Optuna); **стресс-тест** — симуляция резкой смены условий (drift), оценка деградации | `best_model`, правила drift и retraining; участие в Forecast Cup |
-| **4. Инфраструктура и prod-мониторинг** | ЛР9–10, PRC | Лучшая модель → **REST API** + **Docker** + **MLflow**; логирование; сценарий **автоматического retrain** при падении качества | Контейнеризованный сервис, demo на защите |
+| Веха | Milestones | Содержание | Результат этапа | PDF |
+|------|------------|------------|-----------------|-----|
+| **1. Разведочный анализ и очистка** | ЛР1–2 | Сырой массив партнёра: очистка от сбоев и пропусков; ACF/PACF; сезонность; ADF/KPSS | Очищенный массив; `data/processed/`, `preprocessing.py` | [p_v1](attachments/p_v1.pdf) |
+| **2. Статистическое и ML-моделирование** | ЛР3–6 | SARIMA (AIC/BIC, остатки); FE (лаги, rolling, exog); CatBoost/LightGBM; Optuna | Сравнительная таблица stat vs ML | [p_v2](attachments/p_v2.pdf) |
+| **3. Глубокое обучение и устойчивость** | ЛР7–8, COP | LSTM/GRU (PyTorch); многошаговый прогноз; стресс-тест drift | `best_model`, правила retraining; Forecast Cup | [p_v3](attachments/p_v3.pdf) |
+| **4. Инфраструктура и prod-мониторинг** | ЛР9–10, PRC | REST API + Docker + MLflow; монитор drift; auto-retrain | Контейнеризованный сервис, demo на защите | [p_v4](attachments/p_v4.pdf) |
 
 На каждой вехе преподаватель проверяет не только «галочку ЛР», но и **связность** с бизнес-постановкой выбранной темы (§2.1).
 
@@ -379,6 +380,7 @@ RACI по milestones: [project_guidelines.md §3.4](project_guidelines.md#34-м�
 | Студенты | [project_guidelines.md](project_guidelines.md) |
 | Студенты | [templates/project_charter.md](templates/project_charter.md) |
 | Студенты | [templates/milestone_report.md](templates/milestone_report.md) |
+| Студенты | [attachments/p_v1.pdf](attachments/p_v1.pdf) … [p_v4.pdf](attachments/p_v4.pdf) — вехи проекта |
 | Студенты | [templates/defense_outline.md](templates/defense_outline.md) |
 | Преподаватель | [rubrics.md](rubrics.md) |
 | Преподаватель | [docs/grading.md](../docs/grading.md) |
